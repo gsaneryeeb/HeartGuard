@@ -14,6 +14,8 @@
 		24C5BBD61E5FA3BE00D17B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C5BBD41E5FA3BE00D17B2E /* LaunchScreen.storyboard */; };
 		24C5BBE11E5FA3BE00D17B2E /* HeartGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBE01E5FA3BE00D17B2E /* HeartGuardTests.swift */; };
 		24C5BBEC1E5FA3BE00D17B2E /* HeartGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */; };
+		24EFC2A81E760983009EA96A /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EFC2A71E760983009EA96A /* GoogleService-Info-2.plist */; };
+		5E5A84C4F9380512D98D5FAA /* Pods_HeartGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0EABF8809E813CD7926CF8 /* Pods_HeartGuard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		24C5BBE71E5FA3BE00D17B2E /* HeartGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardUITests.swift; sourceTree = "<group>"; };
 		24C5BBED1E5FA3BE00D17B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24EFC2A71E760983009EA96A /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartGuard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard.debug.xcconfig"; sourceTree = "<group>"; };
+		68AEB57C8C385E9CEE59157F /* Pods-HeartGuard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartGuard.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard.release.xcconfig"; sourceTree = "<group>"; };
+		BE0EABF8809E813CD7926CF8 /* Pods_HeartGuard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartGuard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5A84C4F9380512D98D5FAA /* Pods_HeartGuard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				24C5BBDF1E5FA3BE00D17B2E /* HeartGuardTests */,
 				24C5BBEA1E5FA3BE00D17B2E /* HeartGuardUITests */,
 				24C5BBC91E5FA3BE00D17B2E /* Products */,
+				EE1B3602E4F73BBFFEDA48D3 /* Pods */,
+				6D8E6CEB8909214228264C7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				24C5BBD21E5FA3BE00D17B2E /* Assets.xcassets */,
 				24C5BBD41E5FA3BE00D17B2E /* LaunchScreen.storyboard */,
 				24C5BBD71E5FA3BE00D17B2E /* Info.plist */,
+				24EFC2A71E760983009EA96A /* GoogleService-Info-2.plist */,
 			);
 			path = HeartGuard;
 			sourceTree = "<group>";
@@ -125,6 +135,23 @@
 			path = HeartGuardUITests;
 			sourceTree = "<group>";
 		};
+		6D8E6CEB8909214228264C7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE0EABF8809E813CD7926CF8 /* Pods_HeartGuard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE1B3602E4F73BBFFEDA48D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */,
+				68AEB57C8C385E9CEE59157F /* Pods-HeartGuard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24C5BBF01E5FA3BE00D17B2E /* Build configuration list for PBXNativeTarget "HeartGuard" */;
 			buildPhases = (
+				F5752B49C817CCDA86336492 /* [CP] Check Pods Manifest.lock */,
 				24C5BBC41E5FA3BE00D17B2E /* Sources */,
 				24C5BBC51E5FA3BE00D17B2E /* Frameworks */,
 				24C5BBC61E5FA3BE00D17B2E /* Resources */,
+				822A2FB0AE7E6F66DA0ECB09 /* [CP] Embed Pods Frameworks */,
+				177F9E58A4BD1F4296F0C6B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +267,7 @@
 			files = (
 				24C5BBD61E5FA3BE00D17B2E /* LaunchScreen.storyboard in Resources */,
 				24C5BBD31E5FA3BE00D17B2E /* Assets.xcassets in Resources */,
+				24EFC2A81E760983009EA96A /* GoogleService-Info-2.plist in Resources */,
 				24C5BBD11E5FA3BE00D17B2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +287,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		177F9E58A4BD1F4296F0C6B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		822A2FB0AE7E6F66DA0ECB09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5752B49C817CCDA86336492 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24C5BBC41E5FA3BE00D17B2E /* Sources */ = {
@@ -411,12 +490,13 @@
 		};
 		24C5BBF11E5FA3BE00D17B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9MF9GV29AQ;
 				INFOPLIST_FILE = HeartGuard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = saneryee.HeartGuard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saneryee.HeartGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -424,12 +504,13 @@
 		};
 		24C5BBF21E5FA3BE00D17B2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68AEB57C8C385E9CEE59157F /* Pods-HeartGuard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9MF9GV29AQ;
 				INFOPLIST_FILE = HeartGuard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = saneryee.HeartGuard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saneryee.HeartGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -512,6 +593,7 @@
 				24C5BBF21E5FA3BE00D17B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24C5BBF31E5FA3BE00D17B2E /* Build configuration list for PBXNativeTarget "HeartGuardTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +602,7 @@
 				24C5BBF51E5FA3BE00D17B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24C5BBF61E5FA3BE00D17B2E /* Build configuration list for PBXNativeTarget "HeartGuardUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +611,7 @@
 				24C5BBF81E5FA3BE00D17B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
