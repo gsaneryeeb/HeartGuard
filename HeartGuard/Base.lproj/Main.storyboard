@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,15 +24,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BVy-V5-w76">
                                 <rect key="frame" x="20" y="28" width="335" height="619"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-cM-6UD">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="97"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to HeartGuard ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6o-Fq-0VV">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="105" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-cM-6UD">
-                                        <rect key="frame" x="0.0" y="28.5" width="335" height="97"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-mu-uwR">
                                         <rect key="frame" x="0.0" y="133.5" width="335" height="30"/>
                                         <nil key="textColor"/>
@@ -62,14 +62,15 @@
                                             <segment title="Sign up"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-MF-WvH">
-                                        <rect key="frame" x="0.0" y="283.5" width="335" height="14.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lad-RK-A0w">
+                                        <rect key="frame" x="0.0" y="283.5" width="335" height="30"/>
+                                        <state key="normal" title="Skip"/>
+                                        <connections>
+                                            <action selector="skipAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ji9-Zn-V0Q"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znK-Wc-6ef" userLabel="error Label">
-                                        <rect key="frame" x="0.0" y="306" width="335" height="313"/>
+                                        <rect key="frame" x="0.0" y="321.5" width="335" height="297.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -90,46 +91,122 @@
                         <outlet property="emailText" destination="XVa-mu-uwR" id="Q0E-An-qeo"/>
                         <outlet property="passwordText" destination="iFS-Z3-si9" id="Oha-EQ-2wa"/>
                         <outlet property="segmentControl" destination="hwb-xW-ZuA" id="Go5-Ef-TwG"/>
-                        <segue destination="xYh-yp-eNP" kind="show" identifier="segue" id="8Y2-Rw-fGG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="141.67916041979012"/>
+            <point key="canvasLocation" x="52" y="-65"/>
         </scene>
-        <!--View Controller2-->
-        <scene sceneID="dQ4-tL-idK">
+        <!--Heart Guard-->
+        <scene sceneID="onw-AZ-B1O">
             <objects>
-                <viewController id="xYh-yp-eNP" customClass="ViewController2" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GPA-2Y-MLD"/>
-                        <viewControllerLayoutGuide type="bottom" id="paF-lX-cm8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oZw-iv-gZJ">
+                <tableViewController id="xQQ-kc-zd3" customClass="TableViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w92-Td-Kaq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-aI-sSa">
-                                <rect key="frame" x="150" y="318" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log out"/>
-                                <connections>
-                                    <action selector="logout:" destination="xYh-yp-eNP" eventType="touchUpInside" id="IfI-QC-yRf"/>
-                                </connections>
-                            </button>
-                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PIM-XQ-3VG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PIM-XQ-3VG" id="CFy-yU-mvw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xQQ-kc-zd3" id="pZG-Mu-H8s"/>
+                            <outlet property="delegate" destination="xQQ-kc-zd3" id="8A2-P3-8CX"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_click" id="bC3-sE-bUG"/>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-sJ-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3006" y="-426"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="qL7-eT-stS">
+            <objects>
+                <viewController id="woM-mR-fiF" customClass="DayViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KDZ-RL-88y"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Oj-l2-2GE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="doU-Du-DNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="segue2" id="mHA-sH-5nw"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MsJ-o7-2ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0B-Ak-vSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877.60000000000002" y="141.67916041979012"/>
+            <point key="canvasLocation" x="4022" y="-427"/>
+        </scene>
+        <!--Heart Guard-->
+        <scene sceneID="rHo-gv-doR">
+            <objects>
+                <viewController title="Heart Guard" id="DSJ-2U-Mqd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0tB-AG-NNn"/>
+                        <viewControllerLayoutGuide type="bottom" id="fYp-tu-QZQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HMM-HU-2N5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cloud" image="Cloud" selectedImage="Cloud_click" id="hXM-WU-Xbu"/>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="H1Y-11-Z2f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5e-S3-btQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3006" y="401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GPf-w9-i0e">
+            <objects>
+                <navigationController storyboardIdentifier="showHeartBeat" id="Z7g-Lt-Rc4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQc-LI-CsB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7o5-cW-tAW" kind="relationship" relationship="rootViewController" id="qS2-si-FAz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlo-zy-jPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-65"/>
+        </scene>
+        <!--Heart Guard-->
+        <scene sceneID="Qzq-jf-xkD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7o5-cW-tAW" customClass="TabBarViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="FIX-Lp-4tB"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="em5-84-DHG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xQQ-kc-zd3" kind="relationship" relationship="viewControllers" id="afA-Z2-KyK"/>
+                        <segue destination="DSJ-2U-Mqd" kind="relationship" relationship="viewControllers" id="IUG-wl-qHd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="422-gz-iyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986" y="-65"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Cloud" width="25" height="25"/>
+        <image name="Cloud_click" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
+        <image name="Home_click" width="25" height="25"/>
         <image name="Logo" width="230" height="97"/>
     </resources>
 </document>

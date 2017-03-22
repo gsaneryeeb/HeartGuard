@@ -1,14 +1,14 @@
 //
-//  ViewController2.swift
-//  
+//  TabBarViewController.swift
+//  HeartGuard
 //
-//  Created by JasonZ on 2017-3-14.
-//
+//  Created by JasonZ on 2017-3-23.
+//  Copyright © 2017 saneryee. All rights reserved.
 //
 
 import UIKit
 
-class ViewController2: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

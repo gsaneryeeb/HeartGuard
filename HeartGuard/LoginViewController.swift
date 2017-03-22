@@ -8,13 +8,29 @@
 
 import UIKit
 import FirebaseAuth
+import HealthKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController,UINavigationControllerDelegate {
 
+    
+    // MARK: Properties
+    
+    
+    
+    // MARK: Ouelet
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var actionButton: UIButton!
+    
+    
+    // MARK: Actions
+    
+    @IBAction func skipAction(_ sender: UIButton) {
+        
+        HealthKitManager.getTodaysHeartRates()
+        
+    }
     
     // MARK: Login
     @IBAction func action(_ sender: UIButton) {
@@ -26,7 +42,11 @@ class ViewController: UIViewController {
                 FIRAuth.auth()?.signIn(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
                     if user != nil {
                         // Sign in successful
-                        self.performSegue(withIdentifier: "segue", sender: self)
+                        
+                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UINavigationController
+                        
+                        self.present(controller, animated: true, completion: nil)
+                        //self.performSegue(withIdentifier: "segue", sender: self)
                         
                     }else{
                         if let myError = error?.localizedDescription{
@@ -44,7 +64,12 @@ class ViewController: UIViewController {
                 FIRAuth.auth()?.createUser(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
                     if user != nil
                     {
-                        self.performSegue(withIdentifier: "segue", sender: self)
+                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UINavigationController
+                        
+                        self.present(controller, animated: true, completion: nil)
+                        
+                    
+                        //self.performSegue(withIdentifier: "segue", sender: self)
 
                     }
                     else
@@ -69,6 +94,7 @@ class ViewController: UIViewController {
     
     
     
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,5 +107,9 @@ class ViewController: UIViewController {
     }
 
 
+    // MARK: Health Kit
+    
+    
+    
 }
 

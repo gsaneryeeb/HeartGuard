@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: Firebase initialization
         FIRApp.configure()
+        
+        // MARK: Request HealthKit Authorization
+        HealthKitManager.requestAuthorization()
+        
+        
+        
         return true
     }
 
