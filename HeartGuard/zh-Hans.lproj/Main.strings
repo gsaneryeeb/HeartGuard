@@ -1,0 +1,39 @@
+
+/* Class = "UIViewController"; title = "Heart Guard"; ObjectID = "DSJ-2U-Mqd"; */
+"DSJ-2U-Mqd.title" = "Heart Guard";
+
+/* Class = "UINavigationItem"; title = "Heart Guard"; ObjectID = "FIX-Lp-4tB"; */
+"FIX-Lp-4tB.title" = "Heart Guard";
+
+/* Class = "UINavigationItem"; title = "Heart Guard"; ObjectID = "H1Y-11-Z2f"; */
+"H1Y-11-Z2f.title" = "Heart Guard";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "NVK-WW-G7F"; */
+"NVK-WW-G7F.normalTitle" = "登陆";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "XVa-mu-uwR"; */
+"XVa-mu-uwR.placeholder" = "邮箱";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "bC3-sE-bUG"; */
+"bC3-sE-bUG.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Cloud"; ObjectID = "hXM-WU-Xbu"; */
+"hXM-WU-Xbu.title" = "Cloud";
+
+/* Class = "UISegmentedControl"; hwb-xW-ZuA.segmentTitles[0] = "Login"; ObjectID = "hwb-xW-ZuA"; */
+"hwb-xW-ZuA.segmentTitles[0]" = "Login";
+
+/* Class = "UISegmentedControl"; hwb-xW-ZuA.segmentTitles[1] = "Sign up"; ObjectID = "hwb-xW-ZuA"; */
+"hwb-xW-ZuA.segmentTitles[1]" = "Sign up";
+
+/* Class = "UITextField"; placeholder = "Passowrd"; ObjectID = "iFS-Z3-si9"; */
+"iFS-Z3-si9.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "lad-RK-A0w"; */
+"lad-RK-A0w.normalTitle" = "跳过";
+
+/* Class = "UILabel"; text = "Welcome to HeartGuard ！"; ObjectID = "m6o-Fq-0VV"; */
+"m6o-Fq-0VV.text" = "欢迎来到心脏卫士！";
+
+/* Class = "UINavigationItem"; title = "Heart Guard"; ObjectID = "rah-xg-J2n"; */
+"rah-xg-J2n.title" = "心脏卫士！";

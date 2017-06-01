@@ -14,17 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // MARK: Firebase initialization
         FIRApp.configure()
         
-        // MARK: Request HealthKit Authorization
-        HealthKitManager.requestAuthorization()
+        // Create an HeartRateStore
+        let heartRateStore = HeartRateStore()
         
-        
+        // Access the HRItemsViewController and set its item store 
+        let itemsController = window!.rootViewController as! HRItemsViewController
+        itemsController.heartRateStore = heartRateStore
         
         return true
     }

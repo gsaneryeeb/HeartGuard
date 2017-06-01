@@ -1,49 +1,20 @@
 //
-//  TableViewController.swift
+//  HRItemsViewController.swift
 //  HeartGuard
 //
-//  Created by JasonZ on 2017-3-23.
+//  Created by JasonZ on 2017-6-1.
 //  Copyright © 2017 saneryee. All rights reserved.
 //
 
 import UIKit
-import HealthKit
 
-class TableViewController: UITableViewController {
+class HRItemsViewController: UITableViewController {
 
-    // MARK: Outlets
+    var heartRateStore: HeartRateStore!
     
-    @IBOutlet var heartBeatTableView:UITableView!
-    
-    var results:[HKSample]?
-    let heartRateUnit:HKUnit = HKUnit(from: "count/min")
-    
-    // MARK: Function
-    func updateTableViewContent(newContent: [HKSample])
-    {
-        print("---------TableViewController updateContent---------")
-        DispatchQueue.main.async(){ () -> Void in
-            self.results = newContent
-            self.tableView.reloadData()
-        }
-    }
-    
-    func clearContent()
-    {
-        self.results?.removeAll()
-        self.tableView.reloadData()
-    }
-    
-    // MARK: life Cycle
     override func viewDidLoad() {
-        
-        print("---TableViewController: viewDidLoad---")
-        
         super.viewDidLoad()
-        
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -59,58 +30,24 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-        
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
-        print("---TableViewController: numberOfRowsInSection---")
-        
-
-        guard (HeartRateRecords.sharedInstance.listOfRecords.count) > 0 else { return 0}
-        
-        print("results count=\(HeartRateRecords.sharedInstance.listOfRecords.count)")
-        
-        return HeartRateRecords.sharedInstance.listOfRecords.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "heartBeatTableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        
-        let index = indexPath.row
-        
-        guard let currData:HKQuantitySample = HeartRateRecords.sharedInstance.listOfRecords[index] as? HKQuantitySample else { return cell }
-        
-        // data
-        let currDate:Date = currData.startDate
-        let dateFormatter:DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date:String = dateFormatter.string(from: currDate)
-        cell.textLabel?.text = date
 
-        // time
-        dateFormatter.dateFormat = "HH:mm:ss a"
-        let time:String = dateFormatter.string(from: currDate)
-        // set cell
-
-        // heart rate
-        cell.detailTextLabel?.text = "\(currData.quantity.doubleValue(for: heartRateUnit))"
-        
         return cell
     }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-    }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -156,5 +93,5 @@ class TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

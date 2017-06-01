@@ -9,16 +9,21 @@
 import UIKit
 import HealthKit
 
-class HealthKitManager: NSObject {
+class HealthKitManager: UIViewController{
 
     // MARK: Health Kit
-    static let health:HKHealthStore = HKHealthStore()
-    static let heartRateUnit:HKUnit = HKUnit(from: "count/min")
-    static let heartRateType:HKQuantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
-    static var heartRateQuery:HKSampleQuery?
+    let health:HKHealthStore = HKHealthStore()
+    let heartRateUnit:HKUnit = HKUnit(from: "count/min")
+    let heartRateType:HKQuantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+    var heartRateQuery:HKSampleQuery?
+    
+    // MARK: properties
+    var heartRateResultsTable:TableViewController?
+    
+    
     
     // MARK: Method to get todays heart rate = this only reads data from health kit
-    static func getTodaysHeartRates()
+    func getTodaysHeartRates()
     {
         
         //predicate
@@ -41,15 +46,32 @@ class HealthKitManager: NSObject {
             
             self.printHeartRateInfo(results: results)
             
-            //self.updateHistoryTableViewContent(results)
+            self.updateHeartRateTableViewContent(samples: results)
             
         }
         health.execute(heartRateQuery!)
         
     }
     
+    // MARK: Set up heart rate table
+    
+    func setupHeartRateTable()
+    {
+        let childs = self.childViewControllers
+        
+        guard childs.count > 0 else { return }
+        
+        for child in childs
+        {
+            if let tbvc = child as? TableViewController
+            {
+                heartRateResultsTable = tbvc
+            }
+        }
+    }
+    
     // MARK: Testing prints heart rate info
-    static func printHeartRateInfo(results:[HKSample]?)
+    func printHeartRateInfo(results:[HKSample]?)
     {
         //for(var iter = 0; iter < results!.count; iter++)
         for iter in 0...results!.count-1
@@ -70,7 +92,7 @@ class HealthKitManager: NSObject {
     }//eom
     
     // MARK: Request Authorization
-    static func requestAuthorization()
+    func requestAuthorization()
     {
         // reading
         let readingTypes:Set = Set([heartRateType])
@@ -91,5 +113,15 @@ class HealthKitManager: NSObject {
             }
         }// eo-request
     }//eom
+    
+    // MARK: Heart Rate Table
+    func updateHeartRateTableViewContent(samples: [HKSample]?)
+    {
+        guard (samples?.count)! > 0 else {return}
+        
+        heartRateResultsTable?.updateTableViewContent(newContent: samples!)
+        
+    }
+    
     
 }

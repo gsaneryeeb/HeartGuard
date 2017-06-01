@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  HeartGuard
+
+  Created by JasonZ on 2017-4-6.
+  Copyright © 2017 saneryee. All rights reserved.
+*/
+
+CFBundleDisplayName = "心脏卫士";
