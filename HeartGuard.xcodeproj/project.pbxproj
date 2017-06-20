@@ -11,7 +11,7 @@
 		2419B26C1EDFCEF100ED4F8C /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419B26B1EDFCEF100ED4F8C /* HeartRate.swift */; };
 		2419B26E1EDFF55500ED4F8C /* HeartRateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */; };
 		2456873E1E7A61FF009E687E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456873D1E7A61FF009E687E /* HealthKit.framework */; };
-		245687411E7B4AF1009E687E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245687401E7B4AF1009E687E /* HealthKitManager.swift */; };
+		245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245687401E7B4AF1009E687E /* HealthKitManager1.swift */; };
 		247ABA161E95AE9700F5B2D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA181E95AE9700F5B2D9 /* InfoPlist.strings */; };
 		247ABA1D1E96F07A00F5B2D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA1F1E96F07A00F5B2D9 /* Localizable.strings */; };
 		248246A01E77E69B00A3D4CB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482469F1E77E69B00A3D4CB /* ViewController2.swift */; };
@@ -20,6 +20,7 @@
 		24A5DA9D1E8334350007C290 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5DA9C1E8334350007C290 /* DayViewController.swift */; };
 		24A5DA9F1E8334440007C290 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5DA9E1E8334440007C290 /* DetailViewController.swift */; };
 		24A7BD7B1EC678CB0082705B /* HeartRateRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */; };
+		24AB86F61EF91647003EEC64 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB86F51EF91647003EEC64 /* GCDBlackBox.swift */; };
 		24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */; };
 		24C5BBCE1E5FA3BE00D17B2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */; };
 		24C5BBD11E5FA3BE00D17B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C5BBCF1E5FA3BE00D17B2E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		24C5BBD61E5FA3BE00D17B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C5BBD41E5FA3BE00D17B2E /* LaunchScreen.storyboard */; };
 		24C5BBE11E5FA3BE00D17B2E /* HeartGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBE01E5FA3BE00D17B2E /* HeartGuardTests.swift */; };
 		24C5BBEC1E5FA3BE00D17B2E /* HeartGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */; };
+		24E822F81EF5E4DA0078980C /* HeartRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E822F71EF5E4DA0078980C /* HeartRateCell.swift */; };
 		24EFC2A81E760983009EA96A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EFC2A71E760983009EA96A /* GoogleService-Info.plist */; };
 		5E5A84C4F9380512D98D5FAA /* Pods_HeartGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0EABF8809E813CD7926CF8 /* Pods_HeartGuard.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +56,7 @@
 		2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateStore.swift; sourceTree = "<group>"; };
 		2456873C1E7A61FE009E687E /* HeartGuard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartGuard.entitlements; sourceTree = "<group>"; };
 		2456873D1E7A61FF009E687E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		245687401E7B4AF1009E687E /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		245687401E7B4AF1009E687E /* HealthKitManager1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager1.swift; sourceTree = "<group>"; };
 		247ABA101E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		247ABA111E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		247ABA121E95AE0200F5B2D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		24A5DA9C1E8334350007C290 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		24A5DA9E1E8334440007C290 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateRecords.swift; sourceTree = "<group>"; };
+		24AB86F51EF91647003EEC64 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		24C5BBC81E5FA3BE00D17B2E /* HeartGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		24C5BBE71E5FA3BE00D17B2E /* HeartGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardUITests.swift; sourceTree = "<group>"; };
 		24C5BBED1E5FA3BE00D17B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24E822F71EF5E4DA0078980C /* HeartRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateCell.swift; sourceTree = "<group>"; };
 		24EFC2A71E760983009EA96A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartGuard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard.debug.xcconfig"; sourceTree = "<group>"; };
 		68AEB57C8C385E9CEE59157F /* Pods-HeartGuard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartGuard.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,12 +124,9 @@
 		2419B2661EDFCD6400ED4F8C /* old */ = {
 			isa = PBXGroup;
 			children = (
-				24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */,
-				245687401E7B4AF1009E687E /* HealthKitManager.swift */,
+				245687401E7B4AF1009E687E /* HealthKitManager1.swift */,
 				2482469F1E77E69B00A3D4CB /* ViewController2.swift */,
 				24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */,
-				24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */,
-				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
 				24A5DA9A1E83340D0007C290 /* TableViewController.swift */,
 				24A5DA9C1E8334350007C290 /* DayViewController.swift */,
 				24A5DA9E1E8334440007C290 /* DetailViewController.swift */,
@@ -144,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				2419B26B1EDFCEF100ED4F8C /* HeartRate.swift */,
+				24E822F71EF5E4DA0078980C /* HeartRateCell.swift */,
 				2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */,
 			);
 			name = Model;
@@ -152,7 +154,9 @@
 		247D89501E79200200018A5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */,
 				2419B2691EDFCE6900ED4F8C /* HRItemsViewController.swift */,
+				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				2456873C1E7A61FE009E687E /* HeartGuard.entitlements */,
+				24E822F91EF7CACB0078980C /* Support */,
 				247D89501E79200200018A5F /* Controller */,
 				247D894E1E791FE100018A5F /* View */,
 				247D894F1E791FED00018A5F /* Model */,
@@ -230,6 +235,15 @@
 				24C5BBED1E5FA3BE00D17B2E /* Info.plist */,
 			);
 			path = HeartGuardUITests;
+			sourceTree = "<group>";
+		};
+		24E822F91EF7CACB0078980C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */,
+				24AB86F51EF91647003EEC64 /* GCDBlackBox.swift */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		6D8E6CEB8909214228264C7A /* Frameworks */ = {
@@ -453,12 +467,14 @@
 				24A7BD7B1EC678CB0082705B /* HeartRateRecords.swift in Sources */,
 				24A5DA9B1E83340D0007C290 /* TableViewController.swift in Sources */,
 				24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */,
-				245687411E7B4AF1009E687E /* HealthKitManager.swift in Sources */,
+				245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */,
+				24AB86F61EF91647003EEC64 /* GCDBlackBox.swift in Sources */,
 				24A5DA991E8333E90007C290 /* TabBarViewController.swift in Sources */,
 				2419B26C1EDFCEF100ED4F8C /* HeartRate.swift in Sources */,
 				24A5DA9D1E8334350007C290 /* DayViewController.swift in Sources */,
 				248246A01E77E69B00A3D4CB /* ViewController2.swift in Sources */,
 				24A5DA9F1E8334440007C290 /* DetailViewController.swift in Sources */,
+				24E822F81EF5E4DA0078980C /* HeartRateCell.swift in Sources */,
 				2419B26A1EDFCE6900ED4F8C /* HRItemsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

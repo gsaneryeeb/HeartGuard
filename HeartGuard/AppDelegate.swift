@@ -21,12 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: Firebase initialization
         FIRApp.configure()
         
+        
         // Create an HeartRateStore
-        let heartRateStore = HeartRateStore()
+        var heartRateStore = HeartRateStore()
         
         // Access the HRItemsViewController and set its item store 
-        let itemsController = window!.rootViewController as! HRItemsViewController
-        itemsController.heartRateStore = heartRateStore
+        //let navController = window!.rootViewController as! UINavigationController
+        //let itemsController = navController.topViewController as! HRItemsViewController
+        
+        //itemsController.heartRateStore = heartRateStore
         
         return true
     }

@@ -24,6 +24,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     
     
+    
     // MARK: Ouelet
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -50,13 +51,9 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     if user != nil {
                         // Sign in successful
                         
-                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UINavigationController
+                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UITabBarController
                         
                         self.present(controller, animated: true, completion: nil)
-                        //self.performSegue(withIdentifier: "segue", sender: self)
-                        //self.requestAuthorization()
-                        //self.setupHeartRateTable()
-                        //self.getTodaysHeartRates()
                         
                     }else{
                         if let myError = error?.localizedDescription{
@@ -74,13 +71,10 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                 FIRAuth.auth()?.createUser(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
                     if user != nil
                     {
-                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UINavigationController
+                        let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UITabBarController
                         
                         self.present(controller, animated: true, completion: nil)
                         
-                    
-                        //self.performSegue(withIdentifier: "segue", sender: self)
-
                     }
                     else
                     {
@@ -108,10 +102,11 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         print("----------LoginViewController viewDidLoad----------")
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.requestAuthorization()
-        self.getTodaysHeartRates()
+        // self.requestAuthorization()
+        // self.getTodaysHeartRates()
 
     }
 
@@ -122,105 +117,5 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
 
 
     // MARK: Health Kit
-    
-    // MARK: Method to get todays heart rate = this only reads data from health kit
-    func getTodaysHeartRates()
-    {
-        print("--------LoginViewController getTodaysHeartRates---------")
-        //predicate
-        let calendar = Calendar.current
-        let now = Date()
-        let components = calendar.dateComponents([.year,.month,.day], from: now)
-        guard let startDate:Date = calendar.date(from: components) else { return }
-        let endDate:Date? = calendar.date(byAdding: .day, value: 1, to: startDate)
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
-        
-        // descriptor
-        let sortDescriptors = [NSSortDescriptor(key:HKSampleSortIdentifierEndDate,ascending:false)]
-        heartRateQuery = HKSampleQuery(sampleType: heartRateType,
-                                       predicate: predicate,
-                                       limit: 25,
-                                       sortDescriptors: sortDescriptors)
-        { (query:HKSampleQuery, results:[HKSample]?, error:Error?) -> Void in
-            
-            guard error == nil else { print("error");return}
-            
-            self.printHeartRateInfo(results: results)
-            
-            //self.updateHeartRateTableViewContent(samples: results)
-            
-        }
-        health.execute(heartRateQuery!)
-        
-    }
-    
-    // MARK: Testing prints heart rate info
-    func printHeartRateInfo(results:[HKSample]?)
-    {
-        //for(var iter = 0; iter < results!.count; iter++)
-        
-        print("result count:\(results!.count)")
-        
-        for iter in 0...results!.count-1
-        {
-            guard let currData:HKQuantitySample = results![iter] as? HKQuantitySample else { return }
-            
-            HeartRateRecords.sharedInstance.listOfRecords.append(currData)
-            
-            print("[\(iter)]")
-            print("Heart Rate:\(currData.quantity.doubleValue(for: heartRateUnit))")
-            print("quantityType: \(currData.quantityType)")
-            print("Start Date: \(currData.startDate)")
-            print("End Date:\(currData.endDate)")
-            print("Metadata: \(currData.metadata)")
-            print("UUID: \(currData.uuid)")
-            print("Source: \(currData.sourceRevision)")
-            print("Device: \(currData.device)")
-            print("---------------------------------\n")
-        }//eofl
-    }//eom
-    
-    // MARK: Request Authorization
-    func requestAuthorization()
-    {
-        // reading
-        let readingTypes:Set = Set([heartRateType])
-        
-        // writing
-        let writingTypes:Set = Set([heartRateType])
-        
-        // auth request
-        health.requestAuthorization(toShare: writingTypes, read: readingTypes) { (success, error) -> Void in
-            
-            if error != nil
-            {
-                print("error \(error?.localizedDescription)")
-            }
-            else if success
-            {
-                
-            }
-        }// eo-request
-    }//eom
-    
-    // MARK: Heart Rate Table
-    func updateHeartRateTableViewContent(samples: [HKSample]?)
-    {
-        print("----------LoginViewController updateHeartRateTableViewContent---------")
-        
-        guard (samples?.count)! > 0 else {return}
-        
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "HeartRateDetail") as! TableViewController
-        
-        vc.updateTableViewContent(newContent: samples!)
-        
-        //heartRateResultsTable?.updateTableViewContent(newContent: samples!)
-        
-        
-    }
-    
-    
-    
-    
 }
 

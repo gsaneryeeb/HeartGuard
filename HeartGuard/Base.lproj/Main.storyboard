@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -97,54 +98,72 @@
             </objects>
             <point key="canvasLocation" x="52" y="-65"/>
         </scene>
-        <!--Heart Guard 1-->
+        <!--Heart Guard-->
         <scene sceneID="onw-AZ-B1O">
             <objects>
-                <tableViewController storyboardIdentifier="HeartRateDetail" id="xQQ-kc-zd3" customClass="TableViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HeartRateDetail" id="xQQ-kc-zd3" userLabel="Heart Guard" customClass="HRItemsViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w92-Td-Kaq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="heartBeatTableCell" textLabel="3d1-y0-MHh" detailTextLabel="adx-tl-X38" style="IBUITableViewCellStyleValue1" id="PIM-XQ-3VG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeartBeatTableCell" id="PIM-XQ-3VG" customClass="HeartRateCell" customModule="HeartGuard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PIM-XQ-3VG" id="CFy-yU-mvw">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3d1-y0-MHh">
-                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecordTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRI-fR-6xM">
+                                            <rect key="frame" x="8" y="0.0" width="93" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adx-tl-X38">
-                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="HeartRate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2S-wH-gcI">
+                                            <rect key="frame" x="285" y="11" width="78" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-zG-5kE">
+                                            <rect key="frame" x="8" y="23" width="66.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="w3r-zG-5kE" firstAttribute="top" secondItem="TRI-fR-6xM" secondAttribute="bottom" constant="2" id="3Ns-ec-rmi"/>
+                                        <constraint firstItem="TRI-fR-6xM" firstAttribute="leading" secondItem="CFy-yU-mvw" secondAttribute="leading" constant="8" id="IR6-J5-7ti"/>
+                                        <constraint firstAttribute="bottom" secondItem="w3r-zG-5kE" secondAttribute="bottom" id="cWg-17-Ure"/>
+                                        <constraint firstItem="q2S-wH-gcI" firstAttribute="centerY" secondItem="CFy-yU-mvw" secondAttribute="centerY" id="e0d-oK-NzE"/>
+                                        <constraint firstItem="TRI-fR-6xM" firstAttribute="top" secondItem="CFy-yU-mvw" secondAttribute="top" id="iB7-Hh-7U7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="q2S-wH-gcI" secondAttribute="trailing" constant="4" id="w2X-at-0S5"/>
+                                        <constraint firstItem="w3r-zG-5kE" firstAttribute="leading" secondItem="TRI-fR-6xM" secondAttribute="leading" id="yIp-1i-bm8"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="heartRateLabel" destination="q2S-wH-gcI" id="tVZ-aQ-Whd"/>
+                                    <outlet property="recordTimeLabel" destination="TRI-fR-6xM" id="M0x-ep-jxh"/>
+                                    <outlet property="remarkLabel" destination="w3r-zG-5kE" id="0aw-Ok-IAP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="xQQ-kc-zd3" id="pZG-Mu-H8s"/>
-                            <outlet property="delegate" destination="xQQ-kc-zd3" id="8A2-P3-8CX"/>
+                            <outlet property="dataSource" destination="xQQ-kc-zd3" id="IM8-T2-3kT"/>
+                            <outlet property="delegate" destination="xQQ-kc-zd3" id="0nl-vS-Pfb"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_click" id="bC3-sE-bUG"/>
-                    <navigationItem key="navigationItem" title="Heart Guard 1" id="rah-xg-J2n">
+                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Fb0-Ar-OBT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3bT-Tw-whz"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-sJ-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="-426"/>
+            <point key="canvasLocation" x="2166" y="-373"/>
         </scene>
         <!--Day View Controller-->
         <scene sceneID="qL7-eT-stS">
@@ -157,12 +176,82 @@
                     <view key="view" contentMode="scaleToFill" id="doU-Du-DNN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-uq-bIP">
+                                <rect key="frame" x="20" y="28" width="335" height="631"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-y6-fbC">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeartRate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFk-0V-iEB">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD1-xi-on8">
+                                                <rect key="frame" x="86" y="0.0" width="249" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yt6-KH-EXl">
+                                        <rect key="frame" x="0.0" y="28.5" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qr-zs-CfR">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8I-F0-idB">
+                                                <rect key="frame" x="36" y="0.0" width="299" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-9x-tNQ">
+                                        <rect key="frame" x="0.0" y="57" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmX-6v-O2Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIP-dc-1zp">
+                                                <rect key="frame" x="58.5" y="0.0" width="276.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Db-TxZ">
+                                        <rect key="frame" x="0.0" y="85.5" width="335" height="545.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Oj-l2-2GE" firstAttribute="top" secondItem="Ue8-uq-bIP" secondAttribute="bottom" constant="8" symbolic="YES" id="3HX-bi-67q"/>
+                            <constraint firstItem="Ue8-uq-bIP" firstAttribute="top" secondItem="KDZ-RL-88y" secondAttribute="bottom" constant="8" symbolic="YES" id="BmO-Mr-em8"/>
+                            <constraint firstAttribute="trailing" secondItem="Ue8-uq-bIP" secondAttribute="trailing" constant="20" symbolic="YES" id="Xhv-WD-Fow"/>
+                            <constraint firstItem="Ue8-uq-bIP" firstAttribute="leading" secondItem="doU-Du-DNN" secondAttribute="leading" constant="20" symbolic="YES" id="xlb-1D-ynQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0B-Ak-vSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4022" y="-427"/>
+            <point key="canvasLocation" x="3076" y="-374"/>
         </scene>
         <!--Heart Guard-->
         <scene sceneID="rHo-gv-doR">
@@ -182,30 +271,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5e-S3-btQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="401"/>
+            <point key="canvasLocation" x="2166" y="343"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GPf-w9-i0e">
-            <objects>
-                <navigationController storyboardIdentifier="showHeartBeat" id="Z7g-Lt-Rc4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DQc-LI-CsB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="7o5-cW-tAW" kind="relationship" relationship="rootViewController" id="qS2-si-FAz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wlo-zy-jPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1022" y="-65"/>
-        </scene>
-        <!--Heart Guard 0-->
+        <!--Heart Guard-->
         <scene sceneID="Qzq-jf-xkD">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7o5-cW-tAW" customClass="TabBarViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="showHeartBeat" automaticallyAdjustsScrollViewInsets="NO" id="7o5-cW-tAW" customClass="TabBarViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Heart Guard 0" id="FIX-Lp-4tB"/>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="FIX-Lp-4tB"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="em5-84-DHG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +291,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="422-gz-iyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="-65"/>
+            <point key="canvasLocation" x="1012" y="-65"/>
         </scene>
     </scenes>
     <resources>
