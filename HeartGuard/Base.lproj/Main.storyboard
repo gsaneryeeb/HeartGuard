@@ -147,6 +147,7 @@
                                     <outlet property="heartRateLabel" destination="q2S-wH-gcI" id="tVZ-aQ-Whd"/>
                                     <outlet property="recordTimeLabel" destination="TRI-fR-6xM" id="M0x-ep-jxh"/>
                                     <outlet property="remarkLabel" destination="w3r-zG-5kE" id="0aw-Ok-IAP"/>
+                                    <segue destination="woM-mR-fiF" kind="show" identifier="ShowItem" id="p7T-gI-cFD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -155,7 +156,6 @@
                             <outlet property="delegate" destination="xQQ-kc-zd3" id="0nl-vS-Pfb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_click" id="bC3-sE-bUG"/>
                     <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Fb0-Ar-OBT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3bT-Tw-whz"/>
@@ -163,12 +163,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-sJ-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2166" y="-373"/>
+            <point key="canvasLocation" x="3104.8000000000002" y="-373.76311844077964"/>
         </scene>
-        <!--Day View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="qL7-eT-stS">
             <objects>
-                <viewController id="woM-mR-fiF" customClass="DayViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="woM-mR-fiF" customClass="DetailViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KDZ-RL-88y"/>
                         <viewControllerLayoutGuide type="bottom" id="7Oj-l2-2GE"/>
@@ -178,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ue8-uq-bIP">
-                                <rect key="frame" x="20" y="28" width="335" height="631"/>
+                                <rect key="frame" x="20" y="28" width="335" height="582"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-y6-fbC">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -232,7 +232,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Db-TxZ">
-                                        <rect key="frame" x="0.0" y="85.5" width="335" height="545.5"/>
+                                        <rect key="frame" x="0.0" y="85.5" width="335" height="496.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -248,10 +248,16 @@
                             <constraint firstItem="Ue8-uq-bIP" firstAttribute="leading" secondItem="doU-Du-DNN" secondAttribute="leading" constant="20" symbolic="YES" id="xlb-1D-ynQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateCreatedLabel" destination="BaT-Db-TxZ" id="x7z-fJ-DnT"/>
+                        <outlet property="dateValue" destination="l8I-F0-idB" id="eZg-PD-4hB"/>
+                        <outlet property="heartRateValue" destination="rD1-xi-on8" id="y71-xJ-ZGa"/>
+                        <outlet property="remarkValue" destination="YIP-dc-1zp" id="Bk6-Xp-tos"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0B-Ak-vSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3076" y="-374"/>
+            <point key="canvasLocation" x="4015.1999999999998" y="-374.66266866566718"/>
         </scene>
         <!--Heart Guard-->
         <scene sceneID="rHo-gv-doR">
@@ -285,13 +291,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xQQ-kc-zd3" kind="relationship" relationship="viewControllers" id="afA-Z2-KyK"/>
+                        <segue destination="41K-k5-PYL" kind="relationship" relationship="viewControllers" id="afA-Z2-KyK"/>
                         <segue destination="DSJ-2U-Mqd" kind="relationship" relationship="viewControllers" id="IUG-wl-qHd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="422-gz-iyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="-65"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Hyv-lW-Jw3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="41K-k5-PYL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_click" id="bC3-sE-bUG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cRo-iW-0UX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xQQ-kc-zd3" kind="relationship" relationship="rootViewController" id="XOG-ud-1M9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYB-vz-skI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2165.5999999999999" y="-373.76311844077964"/>
         </scene>
     </scenes>
     <resources>

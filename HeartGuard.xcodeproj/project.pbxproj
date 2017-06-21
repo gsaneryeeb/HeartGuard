@@ -129,7 +129,6 @@
 				24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */,
 				24A5DA9A1E83340D0007C290 /* TableViewController.swift */,
 				24A5DA9C1E8334350007C290 /* DayViewController.swift */,
-				24A5DA9E1E8334440007C290 /* DetailViewController.swift */,
 			);
 			name = old;
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 				24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */,
 				2419B2691EDFCE6900ED4F8C /* HRItemsViewController.swift */,
 				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
+				24A5DA9E1E8334440007C290 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

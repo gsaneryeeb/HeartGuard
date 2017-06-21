@@ -10,26 +10,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var heartRateValue: UILabel!
+    @IBOutlet weak var dateValue: UILabel!
+    @IBOutlet weak var remarkValue: UILabel!
+    @IBOutlet weak var dateCreatedLabel: UILabel!
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    var heartRate: HeartRate!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        heartRateValue.text = "\(heartRate.heartRate!)"
+        dateValue.text = heartRate.startDate
+        remarkValue.text = heartRate.remark
+        dateCreatedLabel.text = "2017-06-21 16:30"
+        
     }
-    */
-
 }

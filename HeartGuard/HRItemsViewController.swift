@@ -50,8 +50,6 @@ class HRItemsViewController: UITableViewController {
     
     // // MARK: - Table View Protocol Method
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("----------HRItemsViewController tableView numberOfRowsInSectiont----------")
-        print("Count =\(heartRateStore.allRates.count)")
         return heartRateStore.allRates.count
     }
 
@@ -107,6 +105,22 @@ class HRItemsViewController: UITableViewController {
             
         }
         
+    }
+    
+    // MARK: Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If the triggered segue is the "ShowItem" segue
+        if segue.identifier == "ShowItem" {
+            
+            // Figure out which row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                // Get the item associated with this row and pass it along
+                let item = heartRateStore.allRates[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.heartRate = item
+            }
+        }
     }
     
     // MARK: - Function
@@ -177,7 +191,7 @@ class HRItemsViewController: UITableViewController {
                         self.heartRateStore.addItem(newHeartRate: heartRateItem)
                     }//eofl
                     
-                    self.tableView.reloadData()
+                    self.tableView.reloadData() // reload Table View data
                 }//performUIUpdatesOnMain
             }else{
                 print("There are no data in results!")
