@@ -12,13 +12,6 @@ class HeartRateStore {
     
     var allRates = [HeartRate]()
     
-    func createItem() -> HeartRate {
-        let newHeartRate = HeartRate(heartRate: 24, startDate: "2017-06-20", remark: "Test")
-        
-        allRates.append(newHeartRate)
-        
-        return newHeartRate
-    }
     
     func addItem(newHeartRate: HeartRate){
         

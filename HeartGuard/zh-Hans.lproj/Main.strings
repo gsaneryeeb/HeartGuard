@@ -33,7 +33,7 @@
 "lad-RK-A0w.normalTitle" = "跳过";
 
 /* Class = "UILabel"; text = "Welcome to HeartGuard ！"; ObjectID = "m6o-Fq-0VV"; */
-"m6o-Fq-0VV.text" = "欢迎来到心脏卫士！";
+"m6o-Fq-0VV.text" = "欢迎来到心脏卫士";
 
 /* Class = "UINavigationItem"; title = "Heart Guard"; ObjectID = "rah-xg-J2n"; */
-"rah-xg-J2n.title" = "心脏卫士！";
+"rah-xg-J2n.title" = "心脏卫士";

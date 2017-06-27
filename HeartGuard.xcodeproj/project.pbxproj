@@ -12,6 +12,7 @@
 		2419B26E1EDFF55500ED4F8C /* HeartRateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */; };
 		2456873E1E7A61FF009E687E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456873D1E7A61FF009E687E /* HealthKit.framework */; };
 		245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245687401E7B4AF1009E687E /* HealthKitManager1.swift */; };
+		2458897E1EFCB54800D31299 /* HGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458897D1EFCB54800D31299 /* HGUser.swift */; };
 		247ABA161E95AE9700F5B2D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA181E95AE9700F5B2D9 /* InfoPlist.strings */; };
 		247ABA1D1E96F07A00F5B2D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA1F1E96F07A00F5B2D9 /* Localizable.strings */; };
 		248246A01E77E69B00A3D4CB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482469F1E77E69B00A3D4CB /* ViewController2.swift */; };
@@ -28,6 +29,7 @@
 		24C5BBD61E5FA3BE00D17B2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C5BBD41E5FA3BE00D17B2E /* LaunchScreen.storyboard */; };
 		24C5BBE11E5FA3BE00D17B2E /* HeartGuardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBE01E5FA3BE00D17B2E /* HeartGuardTests.swift */; };
 		24C5BBEC1E5FA3BE00D17B2E /* HeartGuardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */; };
+		24E108B81EFDD06900A168E2 /* CloudItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E108B71EFDD06900A168E2 /* CloudItemsViewController.swift */; };
 		24E822F81EF5E4DA0078980C /* HeartRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E822F71EF5E4DA0078980C /* HeartRateCell.swift */; };
 		24EFC2A81E760983009EA96A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24EFC2A71E760983009EA96A /* GoogleService-Info.plist */; };
 		5E5A84C4F9380512D98D5FAA /* Pods_HeartGuard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0EABF8809E813CD7926CF8 /* Pods_HeartGuard.framework */; };
@@ -57,6 +59,7 @@
 		2456873C1E7A61FE009E687E /* HeartGuard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeartGuard.entitlements; sourceTree = "<group>"; };
 		2456873D1E7A61FF009E687E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		245687401E7B4AF1009E687E /* HealthKitManager1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager1.swift; sourceTree = "<group>"; };
+		2458897D1EFCB54800D31299 /* HGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGUser.swift; sourceTree = "<group>"; };
 		247ABA101E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		247ABA111E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		247ABA121E95AE0200F5B2D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		24C5BBE71E5FA3BE00D17B2E /* HeartGuardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartGuardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C5BBEB1E5FA3BE00D17B2E /* HeartGuardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartGuardUITests.swift; sourceTree = "<group>"; };
 		24C5BBED1E5FA3BE00D17B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24E108B71EFDD06900A168E2 /* CloudItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudItemsViewController.swift; sourceTree = "<group>"; };
 		24E822F71EF5E4DA0078980C /* HeartRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateCell.swift; sourceTree = "<group>"; };
 		24EFC2A71E760983009EA96A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartGuard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartGuard/Pods-HeartGuard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2419B26B1EDFCEF100ED4F8C /* HeartRate.swift */,
+				2458897D1EFCB54800D31299 /* HGUser.swift */,
 				24E822F71EF5E4DA0078980C /* HeartRateCell.swift */,
 				2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */,
 			);
@@ -155,6 +160,7 @@
 			children = (
 				24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */,
 				2419B2691EDFCE6900ED4F8C /* HRItemsViewController.swift */,
+				24E108B71EFDD06900A168E2 /* CloudItemsViewController.swift */,
 				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
 				24A5DA9E1E8334440007C290 /* DetailViewController.swift */,
 			);
@@ -463,10 +469,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2419B26E1EDFF55500ED4F8C /* HeartRateStore.swift in Sources */,
+				24E108B81EFDD06900A168E2 /* CloudItemsViewController.swift in Sources */,
 				24C5BBCE1E5FA3BE00D17B2E /* LoginViewController.swift in Sources */,
 				24A7BD7B1EC678CB0082705B /* HeartRateRecords.swift in Sources */,
 				24A5DA9B1E83340D0007C290 /* TableViewController.swift in Sources */,
 				24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */,
+				2458897E1EFCB54800D31299 /* HGUser.swift in Sources */,
 				245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */,
 				24AB86F61EF91647003EEC64 /* GCDBlackBox.swift in Sources */,
 				24A5DA991E8333E90007C290 /* TabBarViewController.swift in Sources */,

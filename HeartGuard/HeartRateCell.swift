@@ -13,6 +13,7 @@ class HeartRateCell: UITableViewCell{
     @IBOutlet var recordTimeLabel:UILabel!
     @IBOutlet var remarkLabel: UILabel!
     @IBOutlet var heartRateLabel: UILabel!
+    @IBOutlet var painPatingScaleImageView: UIImageView!
     
     
 }

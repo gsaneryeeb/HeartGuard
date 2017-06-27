@@ -40,6 +40,12 @@ class HRItemsViewController: UITableViewController {
         getTodaysHeartRates()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,9 +70,37 @@ class HRItemsViewController: UITableViewController {
         let item = heartRateStore.allRates[indexPath.row]
         
         // Configure the cell with the Item
-        cell.heartRateLabel?.text = "\(item.heartRate!)"
+        cell.heartRateLabel?.text = "\(Int(item.heartRate!))"
         cell.recordTimeLabel?.text = item.startDate
         cell.remarkLabel?.text = item.remark
+        
+        
+        // Set Pain Rating Scale
+        let painRating = item.painRatingScale!
+        
+        switch Int(painRating) {
+            
+        case 0..<2:
+            // No Hurt
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale0")
+        case 2..<4:
+            // Hurts Little Bit
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale2")
+        case 4..<6:
+            // Hurts Little More
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale4")
+        case 6..<8:
+            // Hurts Even More
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale6")
+        case 8..<10:
+            // Hutrs Whole Lot
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale8")
+        default:
+            // Hurts very very
+            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale10")
+        }
+
+        
         
         return cell
     }
@@ -94,17 +128,7 @@ class HRItemsViewController: UITableViewController {
     // MARK: - Action
     @IBAction func addNewItem(sender: AnyObject){
         // Create a new item and add it to the store
-        let newItem = heartRateStore.createItem()
-        
-        // Figure out where that item is in the array
-        if let index = heartRateStore.allRates.index(of: newItem){
-            let indexPath = IndexPath(row: index, section: 0)
-            
-            // Insert this new row into the table
-            tableView.insertRows(at: [indexPath], with: .automatic)
-            
-        }
-        
+    
     }
     
     // MARK: Segue
@@ -168,25 +192,25 @@ class HRItemsViewController: UITableViewController {
 //                        print("Source: \(currData.sourceRevision)")
 //                        print("Device: \(currData.device)")
 //                        print("---------------------------------\n")
-//                        
+                        
                         //Heart Rate
                         let heartRate  = currData.quantity.doubleValue(for: self.heartRateUnit)
                         
                         // Start Date
                         let currDate:Date = currData.startDate
                         let dateFormatter:DateFormatter = DateFormatter()
-                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                         let date:String = dateFormatter.string(from: currDate)
                         
-                        let remark = date
+                        let startDate = date
                         
-                        // Start Time
-                        dateFormatter.dateFormat = "HH:mm:ss"
-                        let time:String = dateFormatter.string(from: currDate)
-                        
-                        let startDate = time
-                        
-                        let heartRateItem = HeartRate(heartRate: heartRate, startDate: startDate, remark: remark)
+//                        // Start Time
+//                        dateFormatter.dateFormat = "HH:mm:ss"
+//                        let time:String = dateFormatter.string(from: currDate)
+//                        
+//                        let startDate = time
+//                        
+                        let heartRateItem = HeartRate(heartRate: heartRate, startDate: startDate, remark: "", saveDate: "", painRatingScale: 0)
                         
                         self.heartRateStore.addItem(newHeartRate: heartRateItem)
                     }//eofl
