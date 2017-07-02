@@ -48,7 +48,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                 FIRAuth.auth()?.signIn(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
                     if user != nil {
                         // Sign in successful
-                        print("Email=\(self.emailText.text!)")
+
                         let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UITabBarController
                         HGUser.sharedInstance.email = self.emailText.text!
                         HGUser.sharedInstance.userUID = user?.uid

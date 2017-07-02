@@ -54,7 +54,7 @@ class HRItemsViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    // // MARK: - Table View Protocol Method
+    // // MARK: - Table View Protocol Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return heartRateStore.allRates.count
     }
@@ -133,6 +133,7 @@ class HRItemsViewController: UITableViewController {
     
     // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // If the triggered segue is the "ShowItem" segue
         if segue.identifier == "ShowItem" {
             

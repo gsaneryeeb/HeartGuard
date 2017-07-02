@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/HRItemsViewController.swift"
-            timestampString = "519895590.573422"
+            timestampString = "520314235.966013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "getTodaysHeartRates()"
             landmarkType = "7">
          </BreakpointContent>
@@ -214,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/HRItemsViewController.swift"
-            timestampString = "519895590.573422"
+            timestampString = "520314235.966013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "getTodaysHeartRates()"
             landmarkType = "7">
          </BreakpointContent>
@@ -278,23 +278,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/LoginViewController.swift"
-            timestampString = "519891919.631045"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "action(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HeartGuard/LoginViewController.swift"
-            timestampString = "519891919.631045"
+            timestampString = "520329972.978708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -358,11 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/CloudItemsViewController.swift"
-            timestampString = "520248170.427309"
+            timestampString = "520313806.790218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -406,11 +390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/CloudItemsViewController.swift"
-            timestampString = "520224225.244435"
+            timestampString = "520313806.790218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -454,7 +438,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/CloudItemsViewController.swift"
-            timestampString = "520292660.366656"
+            timestampString = "520313806.790218"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/CloudItemsViewController.swift"
+            timestampString = "520313806.790218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -469,12 +469,121 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeartGuard/CloudItemsViewController.swift"
-            timestampString = "520293617.558852"
+            filePath = "HeartGuard/DayViewController.swift"
+            timestampString = "520729150.869524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "DayViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.DayViewController.item.getter : Swift.Optional&lt;__ObjC.NSDictionary&gt;"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/DayViewController.swift"
+                  timestampString = "520501276.389901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.DayViewController.item.setter : Swift.Optional&lt;__ObjC.NSDictionary&gt;"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/DayViewController.swift"
+                  timestampString = "520501276.391365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.DayViewController.init (style : __C.UITableViewStyle) -&gt; HeartGuard.DayViewController"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/DayViewController.swift"
+                  timestampString = "520501276.393155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.DayViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; HeartGuard.DayViewController"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/DayViewController.swift"
+                  timestampString = "520501276.39451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.DayViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;HeartGuard.DayViewController&gt;"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/DayViewController.swift"
+                  timestampString = "520501276.395891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/DayViewController.swift"
+            timestampString = "520729150.869524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/DayViewController.swift"
+            timestampString = "520729150.869524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

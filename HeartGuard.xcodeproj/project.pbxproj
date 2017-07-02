@@ -22,6 +22,7 @@
 		24A5DA9F1E8334440007C290 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A5DA9E1E8334440007C290 /* DetailViewController.swift */; };
 		24A7BD7B1EC678CB0082705B /* HeartRateRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */; };
 		24AB86F61EF91647003EEC64 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB86F51EF91647003EEC64 /* GCDBlackBox.swift */; };
+		24B2E19A1F09A38600DFA3C0 /* CloudDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E1991F09A38600DFA3C0 /* CloudDayCell.swift */; };
 		24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */; };
 		24C5BBCE1E5FA3BE00D17B2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */; };
 		24C5BBD11E5FA3BE00D17B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C5BBCF1E5FA3BE00D17B2E /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		24A5DA9E1E8334440007C290 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateRecords.swift; sourceTree = "<group>"; };
 		24AB86F51EF91647003EEC64 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		24B2E1991F09A38600DFA3C0 /* CloudDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudDayCell.swift; sourceTree = "<group>"; };
 		24C5BBC81E5FA3BE00D17B2E /* HeartGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C5BBCB1E5FA3BE00D17B2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +134,6 @@
 				2482469F1E77E69B00A3D4CB /* ViewController2.swift */,
 				24A7BD7A1EC678CB0082705B /* HeartRateRecords.swift */,
 				24A5DA9A1E83340D0007C290 /* TableViewController.swift */,
-				24A5DA9C1E8334350007C290 /* DayViewController.swift */,
 			);
 			name = old;
 			sourceTree = "<group>";
@@ -150,6 +151,7 @@
 				2419B26B1EDFCEF100ED4F8C /* HeartRate.swift */,
 				2458897D1EFCB54800D31299 /* HGUser.swift */,
 				24E822F71EF5E4DA0078980C /* HeartRateCell.swift */,
+				24B2E1991F09A38600DFA3C0 /* CloudDayCell.swift */,
 				2419B26D1EDFF55500ED4F8C /* HeartRateStore.swift */,
 			);
 			name = Model;
@@ -163,6 +165,7 @@
 				24E108B71EFDD06900A168E2 /* CloudItemsViewController.swift */,
 				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
 				24A5DA9E1E8334440007C290 /* DetailViewController.swift */,
+				24A5DA9C1E8334350007C290 /* DayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */,
 				2458897E1EFCB54800D31299 /* HGUser.swift in Sources */,
 				245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */,
+				24B2E19A1F09A38600DFA3C0 /* CloudDayCell.swift in Sources */,
 				24AB86F61EF91647003EEC64 /* GCDBlackBox.swift in Sources */,
 				24A5DA991E8333E90007C290 /* TabBarViewController.swift in Sources */,
 				2419B26C1EDFCEF100ED4F8C /* HeartRate.swift in Sources */,

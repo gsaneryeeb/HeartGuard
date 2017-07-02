@@ -27,4 +27,36 @@ class HeartRate: NSObject {
         super.init()
     }
     
+    
+    // MARK: Get Image of PainRating from its value(0-10)
+    func getPainImageFromPainRating(painRating: Int) -> UIImage {
+    
+        
+        var painRatingScale: UIImage?
+        
+        switch Int(painRating) {
+            
+        case 0..<2:
+            // No Hurt
+            painRatingScale = #imageLiteral(resourceName: "painScale0")
+        case 2..<4:
+            // Hurts Little Bit
+            painRatingScale = #imageLiteral(resourceName: "painScale2")
+        case 4..<6:
+            // Hurts Little More
+            painRatingScale = #imageLiteral(resourceName: "painScale4")
+        case 6..<8:
+            // Hurts Even More
+            painRatingScale = #imageLiteral(resourceName: "painScale6")
+        case 8..<10:
+            // Hutrs Whole Lot
+            painRatingScale = #imageLiteral(resourceName: "painScale8")
+        default:
+            // Hurts very very
+            painRatingScale = #imageLiteral(resourceName: "painScale10")
+        }
+
+        return painRatingScale!
+    }
+    
 }

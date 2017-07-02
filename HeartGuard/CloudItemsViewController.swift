@@ -18,9 +18,8 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
     
     var handle: FIRDatabaseHandle?
     var ref: FIRDatabaseReference?
-    var listByDate = [String:UInt]()
+    var listByDate:[(saveDate:String, count:UInt)] = []
     
-    var postKey = ""
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -38,15 +37,15 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
                 print("Not Found in Firebase")
             
             } else{
-                print("1st Children count \(snapshot.childrenCount)")
+
                 for child in snapshot.children {
                     
                     
                     let saveDate = (child as AnyObject).key as String
-                    let childCount = (child as AnyObject).childrenCount as UInt
-                    print("1st Children count \(childCount)")
                     
-                    self.listByDate = [saveDate:childCounnt]
+                    let childCount = (child as AnyObject).childrenCount as UInt
+                    
+                    self.listByDate.append((saveDate: saveDate, count: childCount))
                     
                     self.cloudTableVIew.reloadData()
                     
@@ -67,10 +66,33 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cloudViewCell")
-        cell.textLabel?.text = listByDate.keys
-        cell.detailTextLabel?.text = listByDate.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cloudViewCell", for: indexPath)
+        
+        cell.textLabel?.text = listByDate[indexPath.row].saveDate
+        cell.detailTextLabel?.text = "\(listByDate[indexPath.row].count)"
+        
         return cell
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("----------CloudItemsViewContorller prepareForSegue----------")
+        
+        let cell = sender as! UITableViewCell
+        
+        // If the triggered segue is the "ShowDayItem"
+        if segue.identifier == "ShowDayItem" {
+            print("----------CloudItemsViewContorller prepare--ShowDayItem--------")
+            
+            // Figure out which row just tapped
+            if let row = cloudTableVIew.indexPathForSelectedRow?.row {
+                // Get the item associated with this row and pass it along
+                let item = listByDate[row].saveDate
+                let dayViewController = segue.destination as! DayViewController
+                dayViewController.startDate = item
+                
+            }
+        }
         
     }
     
