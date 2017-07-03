@@ -39,6 +39,7 @@ class DayViewController: UITableViewController {
                         self.itemInCloud.startDate = dayDate["startDate"] as? String
                         self.itemInCloud.saveDate = dayDate["createDate"] as? String
                         self.itemInCloudStore.append(self.itemInCloud)
+                        self.tableView.reloadData()
                     }
                 }
             }
