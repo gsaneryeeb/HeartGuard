@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateCreatedLabel: UILabel!
     @IBOutlet weak var painScaleSlider: UISlider!
     @IBOutlet weak var painScaleLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     
     var heartRate: HeartRate!
@@ -55,6 +56,7 @@ class DetailViewController: UIViewController {
         */
         ref?.child(userUID).child(date!).childByAutoId().setValue(["startDate":heartRate.startDate,"heartRate":heartRate.heartRate,"feeling":painScaleLabel.text,"createDate":createDate])
         
+        
     }
     // MARK: - Live Flow
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +82,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         ref = FIRDatabase.database().reference()
+        
+        saveButton.layer.cornerRadius = 5
         
     }
 }

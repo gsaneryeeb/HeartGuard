@@ -104,6 +104,8 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         print("----------LoginViewController viewDidLoad----------")
         
         super.viewDidLoad()
+        
+        actionButton.layer.cornerRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
         // self.requestAuthorization()
         // self.getTodaysHeartRates()
