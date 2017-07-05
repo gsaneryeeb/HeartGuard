@@ -73,35 +73,10 @@ class HRItemsViewController: UITableViewController {
         cell.heartRateLabel?.text = "\(Int(item.heartRate!))"
         cell.recordTimeLabel?.text = item.startDate
         cell.remarkLabel?.text = item.remark
-        
-        
         // Set Pain Rating Scale
         let painRating = item.painRatingScale!
-        
-        switch Int(painRating) {
-            
-        case 0..<2:
-            // No Hurt
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale0")
-        case 2..<4:
-            // Hurts Little Bit
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale2")
-        case 4..<6:
-            // Hurts Little More
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale4")
-        case 6..<8:
-            // Hurts Even More
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale6")
-        case 8..<10:
-            // Hutrs Whole Lot
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale8")
-        default:
-            // Hurts very very
-            cell.painPatingScaleImageView.image = #imageLiteral(resourceName: "painScale10")
-        }
+        cell.painPatingScaleImageView.image = item.getPainImageFromPainRating(painRating: painRating)
 
-        
-        
         return cell
     }
     

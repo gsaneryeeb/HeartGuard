@@ -14,6 +14,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
 
     
     // MARK: Properties
+    var keyboardOnScreen = false
     
     // MARK: Health Kit Properties
     let health:HKHealthStore = HKHealthStore()
@@ -28,6 +29,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var messageLabel: UILabel!
     
     
     // MARK: Actions
@@ -58,12 +60,16 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     }else{
                         if let myError = error?.localizedDescription{
                             
-                            print(myError)
-                        
+                            print("Login error:\(myError)")
+                            
+                            self.messageLabel.text = myError
+                            
                         }else{
                             // user or password error
-                            print("Error")
+                            print(" Other Errors")
                         }
+                        
+                        
                     }
                 })
             }else{
@@ -80,19 +86,17 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     {
                         if let myError = error?.localizedDescription{
                             
-                            print(myError)
+                            print("sign up error:\(myError)")
+                            self.messageLabel.text = myError
                             
                         }else{
-                            // user or password error
-                            print("Error")
+                            print(" Other Errors")
                         }
                     }
                 })
             }
         }
-        
-        
-        
+
         
     }
     
@@ -116,8 +120,58 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    // MARK: Health Kit
 }
+
+// MARK: - LoginViewController: UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate{
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // MARK: Show/Hide Keyboard
+    
+    func keyboardWillShow(_ notification: Notification) {
+        if !keyboardOnScreen {
+            view.frame.origin.y -= keyboardHeight(notification)
+            
+        }
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        if keyboardOnScreen {
+            view.frame.origin.y += keyboardHeight(notification)
+        }
+    }
+    
+    func keyboardDidShow(_ notification: Notification) {
+        keyboardOnScreen = true
+    }
+    
+    func keyboardDidHide(_ notification: Notification) {
+        keyboardOnScreen = false
+    }
+    
+    private func keyboardHeight(_ notification: Notification) -> CGFloat {
+        let userInfo = (notification as NSNotification).userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+    }
+    
+    private func resignIfFirstResponder(_ textField: UITextField){
+        if textField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+    }
+    
+    @IBAction func userDidTapView(_ sender: AnyObject) {
+        resignIfFirstResponder(emailText)
+        resignIfFirstResponder(passwordText)
+    }
+
+}
+
 

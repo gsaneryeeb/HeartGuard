@@ -56,6 +56,24 @@ class DetailViewController: UIViewController {
         */
         ref?.child(userUID).child(date!).childByAutoId().setValue(["startDate":heartRate.startDate,"heartRate":heartRate.heartRate,"feeling":painScaleLabel.text,"createDate":createDate])
         
+        let title = "The record has been saved!"
+
+        let ac = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        
+        self.present(ac,animated: true,completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){
+            
+            self.presentedViewController?.dismiss(animated: false, completion: {()-> Void in
+            
+                // Return last page
+                self.navigationController?.popViewController(animated: true)
+                
+            })
+            
+        }
+        
+        
         
     }
     // MARK: - Live Flow
