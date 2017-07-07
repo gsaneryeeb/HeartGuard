@@ -31,20 +31,17 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     
-    
-    // MARK: Actions
-    
-    @IBAction func skipAction(_ sender: UIButton) {
-    }
-
-        
     // MARK: Login
     @IBAction func action(_ sender: UIButton) {
         
         print("------- LoginViewController: Login button action -------")
         
+        userDidTapView(self)
+        
         if emailText.text != "" && passwordText.text != ""
         {
+            setUIEnable(false)
+            
             if segmentControl.selectedSegmentIndex == 0{
                 // Login user
                 FIRAuth.auth()?.signIn(withEmail: emailText.text!, password: passwordText.text!, completion: { (user, error) in
@@ -57,16 +54,20 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                         
                         self.present(controller, animated: true, completion: nil)
                         
+                        self.setUIEnable(true)
+                        
                     }else{
+                        
+                        self.setUIEnable(true)
+                        
                         if let myError = error?.localizedDescription{
                             
-                            print("Login error:\(myError)")
-                            
-                            self.messageLabel.text = myError
+                            self.showErrorAlert(myError)
                             
                         }else{
                             // user or password error
                             print(" Other Errors")
+                            self.showErrorAlert("Other Errors!")
                         }
                         
                         
@@ -79,27 +80,47 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     {
                         let controller = self.storyboard!.instantiateViewController(withIdentifier: "showHeartBeat") as! UITabBarController
                         
+                        HGUser.sharedInstance.email = self.emailText.text!
+                        HGUser.sharedInstance.userUID = user?.uid
+                        
+        
                         self.present(controller, animated: true, completion: nil)
                         
+                        self.setUIEnable(true)
                     }
                     else
                     {
+                        self.setUIEnable(true)
+                        
                         if let myError = error?.localizedDescription{
                             
-                            print("sign up error:\(myError)")
-                            self.messageLabel.text = myError
+                            self.showErrorAlert(myError)
                             
                         }else{
-                            print(" Other Errors")
+                
+                            self.showErrorAlert("Other Errors!")
+                            
                         }
                     }
                 })
             }
+        }else{
+            
+            self.showErrorAlert("Username or Password Empty.")
         }
 
         
     }
     
+    // MARK: Functions
+    func showErrorAlert(_ error : String){
+        let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     
     
     // MARK: Life Cycle
@@ -110,16 +131,50 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         super.viewDidLoad()
         
         actionButton.layer.cornerRadius = 5
-        // Do any additional setup after loading the view, typically from a nib.
-        // self.requestAuthorization()
-        // self.getTodaysHeartRates()
+        
+        //Set Notification
+//        subscribeToNotification(.UIKeyboardWillShow, selector: #selector(keyboardWillShow))
+//        subscribeToNotification(.UIKeyboardWillHide, selector: #selector(keyboardWillHide))
+//        subscribeToNotification(.UIKeyboardDidShow, selector: #selector(keyboardDidShow))
+//        subscribeToNotification(.UIKeyboardDidHide, selector: #selector(keyboardDidHide))
 
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromAllNotification()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        messageLabel.text = ""
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+}
+
+// MARK: - LoginViewController (Configure UI)
+private extension LoginViewController{
+    
+    func setUIEnable(_ enabled: Bool){
+        emailText.isEnabled = enabled
+        passwordText.isEnabled = enabled
+        actionButton.isEnabled = enabled
+        messageLabel.text = ""
+        messageLabel.isEnabled = enabled
+        
+    }
+    
+    func displayError(_ errorString: String?){
+        if let errorString = errorString{
+            messageLabel.text = errorString
+        }
+    }
+    
 }
 
 // MARK: - LoginViewController: UITextFieldDelegate
@@ -173,5 +228,20 @@ extension LoginViewController: UITextFieldDelegate{
     }
 
 }
+
+// MARK: - LoginViewController (Notification)
+
+private extension LoginViewController{
+    
+    func subscribeToNotification(_ notification: NSNotification.Name, selector: Selector){
+        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
+    }
+    
+    func unsubscribeFromAllNotification(){
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+
 
 
