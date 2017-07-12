@@ -54,8 +54,7 @@ class ChartsViewController:UIViewController {
                     
                 }// end allData
             }// end snapshot
-            print("heartRateForChart Count: \(heartRateForChart.count)")
-
+            
             self.setChart(heartRateForChart)
             
         }) // end query
@@ -64,9 +63,6 @@ class ChartsViewController:UIViewController {
     
     
     func setChart(_ dataForChart: Dictionary<Double,Double>) {
-        
-        print("dataForChart : \(dataForChart)")
-
         
         lineChartView.noDataText = "You need to provide data for the chart."
         
@@ -79,10 +75,8 @@ class ChartsViewController:UIViewController {
             let dataEntry = ChartDataEntry(x: xPoint, y: yPoint)
             
             dataEntries.append(dataEntry)
-            
     
         }
-        
         
         // LienChart
         let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Pain Index ")
@@ -90,14 +84,13 @@ class ChartsViewController:UIViewController {
         
         lineChartView.data = lineChartData
         
-        
         lineChartView.descriptionText = ""
         
         lineChartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         lineChartDataSet.setCircleColor(UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1))
         lineChartDataSet.circleHoleColor = UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)
         lineChartDataSet.circleRadius = 4.0
-        
+    
         lineChartView.xAxis.labelPosition = .bottom
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
         

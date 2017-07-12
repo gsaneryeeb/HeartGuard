@@ -60,16 +60,25 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                         
                         self.setUIEnable(true)
                         
-                        if let myError = error?.localizedDescription{
+                        if let errorCode = FIRAuthErrorCode(rawValue: (error?._code)!){
                             
-                            self.showErrorAlert(myError)
+                            switch errorCode{
                             
-                        }else{
-                            // user or password error
-                            print(" Other Errors")
-                            self.showErrorAlert("Other Errors!")
+                            case .errorCodeOperationNotAllowed:
+                                self.showErrorAlert("The email and password accounts are not enabled. Please contact support.")
+                            case .errorCodeUserDisabled:
+                                self.showErrorAlert("Your account has been disabled. Please contact support.")
+                            case .errorCodeInvalidEmail, .errorCodeWrongPassword:
+                                self.showErrorAlert("Please enter a vaild email or a wrong password")
+                            case .errorCodeNetworkError:
+                                self.showErrorAlert("Network error. Please try again.")
+                            case .errorCodeUserNotFound:
+                                self.showErrorAlert("The user doesn't exist. Please sign up!")
+                            default:
+                                self.showErrorAlert("Unknown error occurred.(\((error?.localizedDescription)!))")
+                            }
+                            
                         }
-                        
                         
                     }
                 })
@@ -92,13 +101,23 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                     {
                         self.setUIEnable(true)
                         
-                        if let myError = error?.localizedDescription{
+                        if let errorCode = FIRAuthErrorCode(rawValue: (error?._code)!){
                             
-                            self.showErrorAlert(myError)
-                            
-                        }else{
-                
-                            self.showErrorAlert("Other Errors!")
+                            switch errorCode{
+                                
+                            case .errorCodeEmailAlreadyInUse:
+                                self.showErrorAlert("The email is already in use with another account.")
+                            case .errorCodeOperationNotAllowed:
+                                self.showErrorAlert("Your account has been disabled. Please contact support.")
+                            case .errorCodeInvalidEmail, .errorCodeInvalidSender,.errorCodeInvalidRecipientEmail:
+                                self.showErrorAlert("Please enter a vaild email.")
+                            case .errorCodeNetworkError:
+                                self.showErrorAlert("Network error. Please try again.")
+                            case .errorCodeWeakPassword:
+                                self.showErrorAlert("Your password is too weak.")
+                            default:
+                                self.showErrorAlert("Unknown error occurred.(\((error?.localizedDescription)!))")
+                            }
                             
                         }
                     }

@@ -65,13 +65,38 @@
                                             <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdv-Ij-Unf"/>
                                         </connections>
                                     </button>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hwb-xW-ZuA">
-                                        <rect key="frame" x="0.0" y="305.5" width="335" height="29"/>
-                                        <segments>
-                                            <segment title="Login"/>
-                                            <segment title="Sign up"/>
-                                        </segments>
-                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lSj-BR-U0h">
+                                        <rect key="frame" x="0.0" y="305.5" width="335" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ud-s0-QzO">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="111.5" id="Jam-Hf-Vc4"/>
+                                                    <constraint firstAttribute="height" constant="28" id="Lpg-jz-e7u"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hwb-xW-ZuA">
+                                                <rect key="frame" x="111.5" y="0.0" width="112" height="29"/>
+                                                <segments>
+                                                    <segment title="Login"/>
+                                                    <segment title="Sign up"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwl-s4-ZnN">
+                                                <rect key="frame" x="223.5" y="0.0" width="111.5" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="898-Dz-E4Q"/>
+                                                    <constraint firstAttribute="width" constant="111.5" id="Kli-la-QzD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znK-Wc-6ef" userLabel="error Label">
                                         <rect key="frame" x="0.0" y="341.5" width="335" height="277.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

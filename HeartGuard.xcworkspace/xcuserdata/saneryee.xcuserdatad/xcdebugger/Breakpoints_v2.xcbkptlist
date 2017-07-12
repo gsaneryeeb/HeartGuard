@@ -547,27 +547,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/LoginViewController.swift"
-            timestampString = "521088835.84745"
+            timestampString = "521540576.191468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "action(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HeartGuard/LoginViewController.swift"
-            timestampString = "521088835.84745"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "showErrorAlert(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -627,11 +611,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/ChartsViewController.swift"
-            timestampString = "521534154.171641"
+            timestampString = "521537342.255776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "setChart(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -755,13 +739,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeartGuard/ChartsViewController.swift"
-            timestampString = "521426239.02341"
+            timestampString = "521537342.255776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "getChartData()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/LoginViewController.swift"
+            timestampString = "521540722.793963"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "action(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.LoginViewController.(action (__ObjC.UIButton) -&gt; ()).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/LoginViewController.swift"
+                  timestampString = "521540753.314254"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1692">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.LoginViewController.(action (__ObjC.UIButton) -&gt; ()).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/LoginViewController.swift"
+                  timestampString = "521540753.315908"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2976">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
