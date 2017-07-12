@@ -13,6 +13,9 @@
 		2456873E1E7A61FF009E687E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2456873D1E7A61FF009E687E /* HealthKit.framework */; };
 		245687411E7B4AF1009E687E /* HealthKitManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245687401E7B4AF1009E687E /* HealthKitManager1.swift */; };
 		2458897E1EFCB54800D31299 /* HGUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458897D1EFCB54800D31299 /* HGUser.swift */; };
+		246E9CA61F1030E500384E62 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246E9CA31F10308E00384E62 /* Charts.framework */; };
+		246E9CA71F1030E500384E62 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 246E9CA31F10308E00384E62 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		246E9CAC1F10320300384E62 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9CAB1F10320300384E62 /* ChartsViewController.swift */; };
 		247ABA161E95AE9700F5B2D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA181E95AE9700F5B2D9 /* InfoPlist.strings */; };
 		247ABA1D1E96F07A00F5B2D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247ABA1F1E96F07A00F5B2D9 /* Localizable.strings */; };
 		248246A01E77E69B00A3D4CB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482469F1E77E69B00A3D4CB /* ViewController2.swift */; };
@@ -37,6 +40,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		246E9CA21F10308E00384E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246E9C9D1F10308E00384E62 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		246E9CA41F10308E00384E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246E9C9D1F10308E00384E62 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		246E9CA81F1030E500384E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 246E9C9D1F10308E00384E62 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 		24C5BBDD1E5FA3BE00D17B2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24C5BBC01E5FA3BE00D17B2E /* Project object */;
@@ -53,6 +77,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		246E9CAA1F1030E500384E62 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				246E9CA71F1030E500384E62 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2419B2691EDFCE6900ED4F8C /* HRItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRItemsViewController.swift; sourceTree = "<group>"; };
 		2419B26B1EDFCEF100ED4F8C /* HeartRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
@@ -61,6 +99,8 @@
 		2456873D1E7A61FF009E687E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		245687401E7B4AF1009E687E /* HealthKitManager1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager1.swift; sourceTree = "<group>"; };
 		2458897D1EFCB54800D31299 /* HGUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGUser.swift; sourceTree = "<group>"; };
+		246E9C9D1F10308E00384E62 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master copy/Charts.xcodeproj"; sourceTree = "<group>"; };
+		246E9CAB1F10320300384E62 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		247ABA101E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		247ABA111E95ADE300F5B2D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		247ABA121E95AE0200F5B2D9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -105,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246E9CA61F1030E500384E62 /* Charts.framework in Frameworks */,
 				5E5A84C4F9380512D98D5FAA /* Pods_HeartGuard.framework in Frameworks */,
 				2456873E1E7A61FF009E687E /* HealthKit.framework in Frameworks */,
 			);
@@ -138,6 +179,15 @@
 			name = old;
 			sourceTree = "<group>";
 		};
+		246E9C9E1F10308E00384E62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				246E9CA31F10308E00384E62 /* Charts.framework */,
+				246E9CA51F10308E00384E62 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		247D894E1E791FE100018A5F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				24C5BBCD1E5FA3BE00D17B2E /* LoginViewController.swift */,
+				246E9CAB1F10320300384E62 /* ChartsViewController.swift */,
 				2419B2691EDFCE6900ED4F8C /* HRItemsViewController.swift */,
 				24E108B71EFDD06900A168E2 /* CloudItemsViewController.swift */,
 				24A5DA981E8333E90007C290 /* TabBarViewController.swift */,
@@ -200,6 +251,7 @@
 				24C5BBC91E5FA3BE00D17B2E /* Products */,
 				EE1B3602E4F73BBFFEDA48D3 /* Pods */,
 				6D8E6CEB8909214228264C7A /* Frameworks */,
+				246E9C9D1F10308E00384E62 /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,10 +338,12 @@
 				24C5BBC61E5FA3BE00D17B2E /* Resources */,
 				822A2FB0AE7E6F66DA0ECB09 /* [CP] Embed Pods Frameworks */,
 				177F9E58A4BD1F4296F0C6B7 /* [CP] Copy Pods Resources */,
+				246E9CAA1F1030E500384E62 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				246E9CA91F1030E500384E62 /* PBXTargetDependency */,
 			);
 			name = HeartGuard;
 			productName = HeartGuard;
@@ -379,6 +433,12 @@
 			mainGroup = 24C5BBBF1E5FA3BE00D17B2E;
 			productRefGroup = 24C5BBC91E5FA3BE00D17B2E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 246E9C9E1F10308E00384E62 /* Products */;
+					ProjectRef = 246E9C9D1F10308E00384E62 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				24C5BBC71E5FA3BE00D17B2E /* HeartGuard */,
@@ -387,6 +447,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		246E9CA31F10308E00384E62 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 246E9CA21F10308E00384E62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		246E9CA51F10308E00384E62 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 246E9CA41F10308E00384E62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		24C5BBC61E5FA3BE00D17B2E /* Resources */ = {
@@ -474,6 +551,7 @@
 				2419B26E1EDFF55500ED4F8C /* HeartRateStore.swift in Sources */,
 				24E108B81EFDD06900A168E2 /* CloudItemsViewController.swift in Sources */,
 				24C5BBCE1E5FA3BE00D17B2E /* LoginViewController.swift in Sources */,
+				246E9CAC1F10320300384E62 /* ChartsViewController.swift in Sources */,
 				24A7BD7B1EC678CB0082705B /* HeartRateRecords.swift in Sources */,
 				24A5DA9B1E83340D0007C290 /* TableViewController.swift in Sources */,
 				24C5BBCC1E5FA3BE00D17B2E /* AppDelegate.swift in Sources */,
@@ -510,6 +588,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		246E9CA91F1030E500384E62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 246E9CA81F1030E500384E62 /* PBXContainerItemProxy */;
+		};
 		24C5BBDE1E5FA3BE00D17B2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24C5BBC71E5FA3BE00D17B2E /* HeartGuard */;
@@ -663,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45547300CA02E317EF96CCAE /* Pods-HeartGuard.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HeartGuard/HeartGuard.entitlements;
 				DEVELOPMENT_TEAM = 9MF9GV29AQ;
@@ -678,6 +762,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68AEB57C8C385E9CEE59157F /* Pods-HeartGuard.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HeartGuard/HeartGuard.entitlements;
 				DEVELOPMENT_TEAM = 9MF9GV29AQ;

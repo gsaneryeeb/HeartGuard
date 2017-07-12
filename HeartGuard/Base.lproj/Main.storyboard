@@ -681,10 +681,10 @@
             </objects>
             <point key="canvasLocation" x="2165.5999999999999" y="342.27886056971516"/>
         </scene>
-        <!--View Controller-->
+        <!--Charts-->
         <scene sceneID="IX2-Zo-Bmo">
             <objects>
-                <viewController id="krV-Qe-jdg" sceneMemberID="viewController">
+                <viewController id="krV-Qe-jdg" customClass="ChartsViewController" customModule="HeartGuard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TWF-8M-hNg"/>
                         <viewControllerLayoutGuide type="bottom" id="Nom-VE-amu"/>
@@ -692,9 +692,35 @@
                     <view key="view" contentMode="scaleToFill" id="Tpf-DR-h9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pain Index Chart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30U-Zq-e9X">
+                                <rect key="frame" x="24" y="72" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laM-8J-y7q" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="24" y="117" width="343" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="kZh-r2-QzJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="30U-Zq-e9X" firstAttribute="top" secondItem="TWF-8M-hNg" secondAttribute="bottom" constant="8" id="4MR-jh-Mac"/>
+                            <constraint firstItem="laM-8J-y7q" firstAttribute="leading" secondItem="Tpf-DR-h9K" secondAttribute="leadingMargin" constant="8" id="7No-ha-fLd"/>
+                            <constraint firstItem="laM-8J-y7q" firstAttribute="top" secondItem="30U-Zq-e9X" secondAttribute="bottom" constant="24" id="Cgs-qY-c1d"/>
+                            <constraint firstItem="laM-8J-y7q" firstAttribute="trailing" secondItem="Tpf-DR-h9K" secondAttribute="trailingMargin" constant="8" id="MlM-g2-ozt"/>
+                            <constraint firstItem="30U-Zq-e9X" firstAttribute="leading" secondItem="Tpf-DR-h9K" secondAttribute="leadingMargin" constant="8" id="h5M-17-rqx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="30U-Zq-e9X" secondAttribute="trailing" constant="8" id="plp-h4-gti"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Mj-cg-r6l"/>
+                    <navigationItem key="navigationItem" title="Charts" id="1Mj-cg-r6l"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="laM-8J-y7q" id="M8F-Ax-zSV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2F-bY-GZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

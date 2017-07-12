@@ -49,12 +49,11 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
                     
                     self.cloudTableVIew.reloadData()
                     
-                    
                 }
             }
-        
-            
         })
+        
+        
     }
     
     // MARK: - Delegate Action

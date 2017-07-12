@@ -333,38 +333,6 @@
             endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HeartGuard.CloudItemsViewController.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HeartGuard"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/CloudItemsViewController.swift"
-                  timestampString = "520223910.943882"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HeartGuard.CloudItemsViewController.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "HeartGuard"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/CloudItemsViewController.swift"
-                  timestampString = "520223910.945572"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "540">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -601,6 +569,198 @@
             startingLineNumber = "121"
             endingLineNumber = "121"
             landmarkName = "showErrorAlert(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521426239.02341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getChartData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.(getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162417.582453"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.(getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162417.584135"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "516">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521534154.171641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "setChart(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521426239.02341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getChartData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521426239.02341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getChartData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162548.831841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.(getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162548.833818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521426239.02341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getChartData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162624.976406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HeartGuard.ChartsViewController.(getChartData () -&gt; Swift.Dictionary&lt;Swift.Double, Swift.Double&gt;).(closure #1)"
+                  moduleName = "HeartGuard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/saneryee/Dev/HeartGuard/HeartGuard/HeartGuard/ChartsViewController.swift"
+                  timestampString = "521162624.98006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeartGuard/ChartsViewController.swift"
+            timestampString = "521426239.02341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getChartData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

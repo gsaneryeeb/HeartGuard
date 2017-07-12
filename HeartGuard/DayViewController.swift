@@ -44,6 +44,41 @@ class DayViewController: UITableViewController {
                 }
             }
         }) // eof firebase
+        
+//        // test
+//        var heartRateForChart:Dictionary<Double,Double> = [:]
+//        
+//        print("UserID = \(HGUser.sharedInstance.userUID!)")
+//        ref?.child(HGUser.sharedInstance.userUID!).queryOrdered(byChild: "heartRate").observe(.value, with: { (snapshot) -> Void in
+//            
+//            if snapshot.exists(){
+//                if let allData = snapshot.value as?[String:AnyObject] {
+//                    
+//                    for(_,dataByDay) in allData{
+//                        
+//                        let heartRates = dataByDay as? [String: AnyObject]
+//                        
+//                        for (_ ,heartData) in heartRates!{
+//                            
+//                            let tempHeart = heartData["heartRate"] as! Double
+//                            let tempFeeling = Double(heartData["feeling"] as! String)!
+//                            
+//                            heartRateForChart[tempHeart] = tempFeeling
+//                            
+//                        } // end for heardata
+//                        
+//                    }//end for
+//                    
+//                }// end allData
+//            }// end snapshot
+//            
+//            print("heartRateForChart Count: \(heartRateForChart.count)")
+//            
+//        }) // end query
+//        
+//        //test end
+//        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
