@@ -151,6 +151,9 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         
         actionButton.layer.cornerRadius = 5
         
+        // Request HealthKit Authorization
+        requestAuthorization()
+        
         //Set Notification
 //        subscribeToNotification(.UIKeyboardWillShow, selector: #selector(keyboardWillShow))
 //        subscribeToNotification(.UIKeyboardWillHide, selector: #selector(keyboardWillHide))
@@ -173,6 +176,31 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // MARK: Request Authorization
+    func requestAuthorization()
+    {
+        // reading
+        let readingTypes:Set = Set([heartRateType])
+        
+        // writing
+        let writingTypes:Set = Set([heartRateType])
+        
+        // auth request
+        health.requestAuthorization(toShare: writingTypes, read: readingTypes) { (success, error) -> Void in
+            
+            if error != nil
+            {
+                print("error \(error?.localizedDescription)")
+            }
+            else if success
+            {
+                
+            }
+        }// eo-request
+    }//eom
+    
     
 }
 

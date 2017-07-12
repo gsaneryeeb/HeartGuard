@@ -195,10 +195,7 @@
                             <outlet property="delegate" destination="xQQ-kc-zd3" id="0nl-vS-Pfb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Fb0-Ar-OBT"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3bT-Tw-whz"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-sJ-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
