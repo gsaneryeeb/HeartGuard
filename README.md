@@ -1,8 +1,6 @@
 # Heart Rate
 Final Udacity iOS Nanodegree Project.
 
-![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/1.png)
-
 ## Project Overview
 This app can store your daily heart rate and heart's feeling into the database. This app also can be displayed  the chart with your data.
 
@@ -25,3 +23,16 @@ You can also use your own email to sign up the app.
 * Storing data using Firebase Database
 * Using HealthKit
 * Using Charts [https://github.com/danielgindi/Charts](https://github.com/danielgindi/Charts)
+
+
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/1.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/2.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/3.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/4.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/5.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/6.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/7.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/8.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/9.png)
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/10.png)
+
