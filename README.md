@@ -13,7 +13,7 @@ Tap the Chart button to dispaly the Heart Rate and Pain Index chart.
 
 ## Demo
 
-* Attention : First of all, you must use Apple Watch or other device to save your heart rate in your iPhone. *
+*Attention : First of all, you must use Apple Watch or other device to save your heart rate in your iPhone.*
 
 TestAccount : test@test.com
 Password: test1234
