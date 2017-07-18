@@ -46,6 +46,8 @@ You can also use your own email to sign up the app.
 
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/7.png)
 
+### When you save a measurement from the "Home" tab, Today's value of "Total number of records" will change in the Cloud tab.
+
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/8.png)
 
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/9.png)

@@ -8,6 +8,7 @@
 
 import UIKit
 import HealthKit
+import FirebaseAuth
 
 class HRItemsViewController: UITableViewController {
 
@@ -20,23 +21,22 @@ class HRItemsViewController: UITableViewController {
     // MARK: properties
     var heartRateStore = HeartRateStore()
     
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        try! FIRAuth.auth()!.signOut()
+        if let storyboard = self.storyboard{
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginView") as! LoginViewController
+                self.present(vc, animated: false, completion: nil)
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         
         print("----------HRItemsViewController viewDidLoad----------")
     
         super.viewDidLoad()
-    
-//        // Get the height of the status bar
-//        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-//        
-//        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-//        tableView.contentInset = insets
-//        tableView.scrollIndicatorInsets = insets
-//        
-//        // Dynamic Cell Heights
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 65
-//        
         
         getTodaysHeartRates()
         

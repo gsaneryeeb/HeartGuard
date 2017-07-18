@@ -15,7 +15,6 @@ class DayViewController: UITableViewController {
     
     var ref: FIRDatabaseReference?
     
-    var itemInCloud  = HeartRate(heartRate: 0, startDate: "", remark: "", saveDate: "", painRatingScale: 0)
     
     var itemInCloudStore:[HeartRate] = []
     
@@ -23,6 +22,7 @@ class DayViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         
         ref = FIRDatabase.database().reference()
         
@@ -32,52 +32,21 @@ class DayViewController: UITableViewController {
             
             if snapshot.exists(){
                 for child in ((snapshot.value as AnyObject).allValues)!{
+    
+                    let itemInCloud  = HeartRate(heartRate: 0, startDate: "", remark: "", saveDate: "", painRatingScale: 0)
+                    
                     if let dayDate = child as? [String:AnyObject]{
                         
-                        self.itemInCloud.heartRate = dayDate["heartRate"] as! Double
-                        self.itemInCloud.painRatingScale = Int(dayDate["feeling"] as! String)!
-                        self.itemInCloud.startDate = dayDate["startDate"] as? String
-                        self.itemInCloud.saveDate = dayDate["createDate"] as? String
-                        self.itemInCloudStore.append(self.itemInCloud)
+                        itemInCloud.heartRate = dayDate["heartRate"] as! Double
+                        itemInCloud.painRatingScale = Int(dayDate["feeling"] as! String)!
+                        itemInCloud.startDate = dayDate["startDate"] as? String
+                        itemInCloud.saveDate = dayDate["createDate"] as? String
+                        self.itemInCloudStore.append(itemInCloud)
                         self.tableView.reloadData()
                     }
                 }
             }
         }) // eof firebase
-        
-//        // test
-//        var heartRateForChart:Dictionary<Double,Double> = [:]
-//        
-//        print("UserID = \(HGUser.sharedInstance.userUID!)")
-//        ref?.child(HGUser.sharedInstance.userUID!).queryOrdered(byChild: "heartRate").observe(.value, with: { (snapshot) -> Void in
-//            
-//            if snapshot.exists(){
-//                if let allData = snapshot.value as?[String:AnyObject] {
-//                    
-//                    for(_,dataByDay) in allData{
-//                        
-//                        let heartRates = dataByDay as? [String: AnyObject]
-//                        
-//                        for (_ ,heartData) in heartRates!{
-//                            
-//                            let tempHeart = heartData["heartRate"] as! Double
-//                            let tempFeeling = Double(heartData["feeling"] as! String)!
-//                            
-//                            heartRateForChart[tempHeart] = tempFeeling
-//                            
-//                        } // end for heardata
-//                        
-//                    }//end for
-//                    
-//                }// end allData
-//            }// end snapshot
-//            
-//            print("heartRateForChart Count: \(heartRateForChart.count)")
-//            
-//        }) // end query
-//        
-//        //test end
-//        
         
     }
     
@@ -103,6 +72,7 @@ class DayViewController: UITableViewController {
         cell.painScaleLabel?.text = "\(item.painRatingScale!)"
         cell.heartRateLabel?.text = "\(Int(item.heartRate!))"
         cell.painPatingImageView.image = item.getPainImageFromPainRating(painRating: item.painRatingScale!)
+        cell.createDateLabel?.text = item.startDate!
         
         return cell
     }

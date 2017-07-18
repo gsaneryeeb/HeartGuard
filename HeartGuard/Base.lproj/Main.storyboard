@@ -201,7 +201,13 @@
                             <outlet property="delegate" destination="xQQ-kc-zd3" id="0nl-vS-Pfb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n"/>
+                    <navigationItem key="navigationItem" title="Heart Guard" id="rah-xg-J2n">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="efi-Ig-2eM">
+                            <connections>
+                                <action selector="logoutAction:" destination="xQQ-kc-zd3" id="FS9-vc-mT7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WK-sJ-gsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -604,17 +610,17 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wg-De-HXT">
-                                            <rect key="frame" x="307" y="11.5" width="60" height="20.5"/>
+                                            <rect key="frame" x="307" y="4.5" width="60" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="xMG-Zs-Tct"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeartRate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-jn-EpV">
-                                            <rect key="frame" x="216.5" y="11" width="82.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="224.5" y="4.5" width="74" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -624,13 +630,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chy-jS-Rez">
+                                            <rect key="frame" x="224.5" y="25" width="31" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="1Wg-De-HXT" firstAttribute="top" secondItem="HVP-jn-EpV" secondAttribute="top" id="1tP-sj-dgP"/>
                                         <constraint firstItem="egf-zE-agw" firstAttribute="leading" secondItem="Vjn-4B-4l0" secondAttribute="leading" constant="8" id="5yI-pf-wvW"/>
-                                        <constraint firstItem="1Wg-De-HXT" firstAttribute="centerY" secondItem="Vjn-4B-4l0" secondAttribute="centerY" id="LL9-Sd-wPl"/>
+                                        <constraint firstItem="chy-jS-Rez" firstAttribute="leading" secondItem="HVP-jn-EpV" secondAttribute="leading" id="88V-h8-4EN"/>
+                                        <constraint firstItem="HVP-jn-EpV" firstAttribute="top" secondItem="egf-zE-agw" secondAttribute="top" id="Ckf-cu-mBk"/>
                                         <constraint firstItem="KM5-9V-cbj" firstAttribute="leading" secondItem="egf-zE-agw" secondAttribute="trailing" constant="8" id="N7z-06-466"/>
-                                        <constraint firstItem="HVP-jn-EpV" firstAttribute="centerY" secondItem="Vjn-4B-4l0" secondAttribute="centerY" id="T83-zb-Gj1"/>
-                                        <constraint firstItem="1Wg-De-HXT" firstAttribute="leading" secondItem="HVP-jn-EpV" secondAttribute="trailing" constant="8" id="ZlU-IH-I5G"/>
+                                        <constraint firstItem="chy-jS-Rez" firstAttribute="bottom" secondItem="egf-zE-agw" secondAttribute="bottom" id="XPX-kf-1Eg"/>
+                                        <constraint firstItem="1Wg-De-HXT" firstAttribute="leading" secondItem="HVP-jn-EpV" secondAttribute="trailing" constant="8.5" id="ZGr-lk-Ohc"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1Wg-De-HXT" secondAttribute="trailing" id="fh3-BF-RMD"/>
                                         <constraint firstItem="KM5-9V-cbj" firstAttribute="centerY" secondItem="Vjn-4B-4l0" secondAttribute="centerY" id="lEW-BN-qCr"/>
                                         <constraint firstItem="egf-zE-agw" firstAttribute="centerY" secondItem="Vjn-4B-4l0" secondAttribute="centerY" id="vGg-qF-K6n"/>
@@ -639,6 +653,7 @@
                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
+                                    <outlet property="createDateLabel" destination="chy-jS-Rez" id="Qmb-27-KV0"/>
                                     <outlet property="heartRateLabel" destination="1Wg-De-HXT" id="TJF-BM-LqM"/>
                                     <outlet property="painPatingImageView" destination="egf-zE-agw" id="NNy-5f-bRe"/>
                                     <outlet property="painScaleLabel" destination="KM5-9V-cbj" id="mhR-WG-jDR"/>

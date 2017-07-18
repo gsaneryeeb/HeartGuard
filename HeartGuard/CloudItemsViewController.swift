@@ -54,9 +54,11 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
                     
                     self.listByDate.append((saveDate: saveDate, count: childCount))
                     
-                    self.cloudTableVIew.reloadData()
-                    
                 }
+                
+                self.listByDate = self.listByDate.sorted{ $0 > $1 }
+                self.cloudTableVIew.reloadData()
+                
             }
             
             DispatchQueue.main.async {
@@ -90,6 +92,8 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("----------CloudItemsViewContorller prepareForSegue----------")
         
+        
+        
         let cell = sender as! UITableViewCell
         
         // If the triggered segue is the "ShowDayItem"
@@ -99,9 +103,16 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
             // Figure out which row just tapped
             if let row = cloudTableVIew.indexPathForSelectedRow?.row {
                 // Get the item associated with this row and pass it along
-                let item = listByDate[row].saveDate
+                let saveDate = listByDate[row].saveDate
                 let dayViewController = segue.destination as! DayViewController
-                dayViewController.startDate = item
+                dayViewController.startDate = saveDate
+                
+                // Set next view back button title
+                let backItem = UIBarButtonItem()
+                backItem.title = saveDate
+                navigationItem.backBarButtonItem = backItem
+                
+                
                 
             }
         }
