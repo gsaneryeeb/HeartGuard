@@ -84,6 +84,8 @@ class ChartsViewController:UIViewController {
         
         lineChartView.data = lineChartData
         
+        lineChartView.chartDescription?.text = ""
+        
         lineChartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         lineChartDataSet.setCircleColor(UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1))
         lineChartDataSet.circleHoleColor = UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)

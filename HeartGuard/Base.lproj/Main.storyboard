@@ -740,7 +740,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-ZZ-L9v">
-                                <rect key="frame" x="24" y="416" width="327" height="185"/>
+                                <rect key="frame" x="24" y="355" width="327" height="185"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="185" id="WOC-aJ-F5g"/>
@@ -749,17 +749,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFL-f2-PKP">
-                                <rect key="frame" x="24" y="387" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nom-VE-amu" firstAttribute="top" secondItem="hdy-ZZ-L9v" secondAttribute="bottom" constant="17" id="2ze-wh-aLr"/>
+                            <constraint firstItem="Nom-VE-amu" firstAttribute="top" secondItem="hdy-ZZ-L9v" secondAttribute="bottom" constant="78" id="2ze-wh-aLr"/>
                             <constraint firstItem="30U-Zq-e9X" firstAttribute="top" secondItem="TWF-8M-hNg" secondAttribute="bottom" constant="8" id="4MR-jh-Mac"/>
                             <constraint firstItem="laM-8J-y7q" firstAttribute="leading" secondItem="Tpf-DR-h9K" secondAttribute="leadingMargin" constant="8" id="7No-ha-fLd"/>
                             <constraint firstItem="laM-8J-y7q" firstAttribute="top" secondItem="30U-Zq-e9X" secondAttribute="bottom" constant="24" id="Cgs-qY-c1d"/>

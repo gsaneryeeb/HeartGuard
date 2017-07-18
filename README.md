@@ -26,13 +26,18 @@ You can also use your own email to sign up the app.
 
 
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/1.png)
+
+### Login screenshot
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/2.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/3.png)
+
+### Allow "Heart Guard" to write and read data.
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/4.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/5.png)
+### Use your Apple Watch or other device to detect your heart rates in your iPhone.
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/10.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/6.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/7.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/8.png)
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/9.png)
-![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/10.png)
-
+![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/11.png)
