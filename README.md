@@ -51,15 +51,15 @@ You can also use your own email to sign up the app.
 ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/11.png)
 
 
-### Definition: Feeling,Pain Scale,Pain Index
+## Definition: Feeling,Pain Scale,Pain Index
 
 There are 10 numbers and 6 levels to delimit feeling etc. 
 
-* 0 - 2 : No Hurt             emoji：![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji1.png)
-* 2 - 4 : Hurts Little Bit    emoji: ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji2.png)
-* 4 - 6 : Hurts Little More   emoji: ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji3.png)
-* 6 - 8 : Hurts Even More     emoji: ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji4.png)
-* 8 - 10 : Hurts Whole Lot    emoji: ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji5.png)
-* 10 : Very Serious           emoji: ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji6.png)
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji1.png) 0 - 2 : No Hurt             
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji2.png) 2 - 4 : Hurts Little Bit    
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji3.png) 4 - 6 : Hurts Little More   
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji4.png) 6 - 8 : Hurts Even More     
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji5.png) 8 - 10 : Hurts Whole Lot    
+* ![](https://github.com/gsaneryeeb/HeartGuard/blob/master/ScreenShot/emoji6.png) 10 : Very Serious           
 
 
