@@ -48,16 +48,30 @@ class HRItemsViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
     
     // // MARK: - Table View Protocol Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        var numOfSections:Int = 0
+        
+        if heartRateStore.allRates.count > 0 {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView = nil
+            numOfSections = 1
+        }else{
+            let noDataLabel:UILabel = UILabel(frame: CGRect(x:0, y:0, width:tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+            noDataLabel.numberOfLines = 0
+            noDataLabel.text = "No data available.\n Please connect your Apple Watch first."
+            noDataLabel.textColor = UIColor.black
+            noDataLabel.textAlignment = .center
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        
         return heartRateStore.allRates.count
+        
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,12 +113,6 @@ class HRItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         // Update the model
         heartRateStore.moveHeartRateAtIndex(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
-    }
-    
-    // MARK: - Action
-    @IBAction func addNewItem(sender: AnyObject){
-        // Create a new item and add it to the store
-    
     }
     
     // MARK: Segue
@@ -181,12 +189,6 @@ class HRItemsViewController: UITableViewController {
                         
                         let startDate = date
                         
-//                        // Start Time
-//                        dateFormatter.dateFormat = "HH:mm:ss"
-//                        let time:String = dateFormatter.string(from: currDate)
-//                        
-//                        let startDate = time
-//                        
                         let heartRateItem = HeartRate(heartRate: heartRate, startDate: startDate, remark: "", saveDate: "", painRatingScale: 0)
                         
                         self.heartRateStore.addItem(newHeartRate: heartRateItem)
@@ -195,6 +197,7 @@ class HRItemsViewController: UITableViewController {
                     self.tableView.reloadData() // reload Table View data
                 }//performUIUpdatesOnMain
             }else{
+                
                 print("There are no data in results!")
             }
         }

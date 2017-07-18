@@ -100,8 +100,7 @@ class DayViewController: UITableViewController {
         
         let item = self.itemInCloudStore[indexPath.row]
         
-        cell.createDateLabel?.text = item.saveDate
-        cell.startDateLabel?.text = item.startDate
+        cell.painScaleLabel?.text = "\(item.painRatingScale!)"
         cell.heartRateLabel?.text = "\(Int(item.heartRate!))"
         cell.painPatingImageView.image = item.getPainImageFromPainRating(painRating: item.painRatingScale!)
         

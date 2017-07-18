@@ -21,7 +21,6 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     let heartRateUnit:HKUnit = HKUnit(from: "count/min")
     let heartRateType:HKQuantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
     var heartRateQuery:HKSampleQuery?
-    var heartRateResultsTable:TableViewController?
     
     
     // MARK: Ouelet
@@ -31,12 +30,21 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: Login
     @IBAction func action(_ sender: UIButton) {
         
         print("------- LoginViewController: Login button action -------")
         
         userDidTapView(self)
+        
+        // Set Activity Indicator
+        DispatchQueue.main.async {
+            self.activityIndicator.alpha = 1.0
+            self.activityIndicator.startAnimating()
+        }
+        
         
         if emailText.text != "" && passwordText.text != ""
         {
@@ -81,6 +89,11 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                         }
                         
                     }
+                    
+                    DispatchQueue.main.async {
+                        self.activityIndicator.isHidden = true
+                    }
+                    
                 })
             }else{
                 // sign up
@@ -96,6 +109,11 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                         self.present(controller, animated: true, completion: nil)
                         
                         self.setUIEnable(true)
+                        
+                        DispatchQueue.main.async {
+                            self.activityIndicator.isHidden = true
+                        }
+                        
                     }
                     else
                     {
@@ -121,11 +139,21 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
                             
                         }
                     }
+                    
+                    DispatchQueue.main.async {
+                        self.activityIndicator.isHidden = true
+                    }
+                    
                 })
             }
         }else{
             
             self.showErrorAlert("Username or Password Empty.")
+            
+            DispatchQueue.main.async {
+                self.activityIndicator.isHidden = true
+            }
+            
         }
 
         
@@ -137,7 +165,7 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         
         alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
         
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
         
     }
     
@@ -151,32 +179,10 @@ class LoginViewController: UIViewController,UINavigationControllerDelegate {
         
         actionButton.layer.cornerRadius = 5
         
+        activityIndicator.alpha = 0.0
         // Request HealthKit Authorization
         requestAuthorization()
-        
-        //Set Notification
-//        subscribeToNotification(.UIKeyboardWillShow, selector: #selector(keyboardWillShow))
-//        subscribeToNotification(.UIKeyboardWillHide, selector: #selector(keyboardWillHide))
-//        subscribeToNotification(.UIKeyboardDidShow, selector: #selector(keyboardDidShow))
-//        subscribeToNotification(.UIKeyboardDidHide, selector: #selector(keyboardDidHide))
-
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        unsubscribeFromAllNotification()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        messageLabel.text = ""
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     // MARK: Request Authorization
     func requestAuthorization()
@@ -237,16 +243,11 @@ extension LoginViewController: UITextFieldDelegate{
     // MARK: Show/Hide Keyboard
     
     func keyboardWillShow(_ notification: Notification) {
-        if !keyboardOnScreen {
-            view.frame.origin.y -= keyboardHeight(notification)
-            
-        }
+        view.frame.origin.y = keyboardHeight(notification) * (-1)
     }
     
     func keyboardWillHide(_ notification: Notification) {
-        if keyboardOnScreen {
-            view.frame.origin.y += keyboardHeight(notification)
-        }
+        view.frame.origin.y = 0
     }
     
     func keyboardDidShow(_ notification: Notification) {
@@ -259,8 +260,12 @@ extension LoginViewController: UITextFieldDelegate{
     
     private func keyboardHeight(_ notification: Notification) -> CGFloat {
         let userInfo = (notification as NSNotification).userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue
-        return keyboardSize.cgRectValue.height
+        let keyboardSize = userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue // of CGRect
+        if passwordText.isFirstResponder{
+            return keyboardSize.cgRectValue.height
+        }else{
+            return 0
+        }
     }
     
     private func resignIfFirstResponder(_ textField: UITextField){

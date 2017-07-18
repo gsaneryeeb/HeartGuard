@@ -12,6 +12,5 @@ class CloudDayCell: UITableViewCell{
     
     @IBOutlet weak var painPatingImageView: UIImageView!
     @IBOutlet weak var heartRateLabel: UILabel!
-    @IBOutlet weak var startDateLabel: UILabel!
-    @IBOutlet weak var createDateLabel: UILabel!
+    @IBOutlet weak var painScaleLabel: UILabel!
 }

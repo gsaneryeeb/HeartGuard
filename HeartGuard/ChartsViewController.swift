@@ -84,8 +84,6 @@ class ChartsViewController:UIViewController {
         
         lineChartView.data = lineChartData
         
-        lineChartView.descriptionText = ""
-        
         lineChartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         lineChartDataSet.setCircleColor(UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1))
         lineChartDataSet.circleHoleColor = UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)
@@ -93,6 +91,7 @@ class ChartsViewController:UIViewController {
     
         lineChartView.xAxis.labelPosition = .bottom
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        
         
         let dangerousLine = ChartLimitLine(limit: 8.0, label: "Dangerous")
         

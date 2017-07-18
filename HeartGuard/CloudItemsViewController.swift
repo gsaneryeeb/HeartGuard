@@ -14,6 +14,7 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
     
     
     @IBOutlet weak var cloudTableVIew: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var handle: FIRDatabaseHandle?
@@ -26,6 +27,11 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
         
         super.viewDidLoad()
         
+        DispatchQueue.main.async {
+            self.activityIndicator.alpha = 1.0
+            self.activityIndicator.startAnimating()
+        }
+        
         ref = FIRDatabase.database().reference()
         
         let userUID = HGUser.sharedInstance.userUID!
@@ -35,7 +41,8 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
             if(snapshot.value is NSNull){
             
                 print("Not Found in Firebase")
-            
+                
+                
             } else{
 
                 for child in snapshot.children {
@@ -51,6 +58,12 @@ class CloudItemsViewController: UIViewController, UITableViewDelegate,  UITableV
                     
                 }
             }
+            
+            DispatchQueue.main.async {
+                self.activityIndicator.isHidden = true
+            }
+            
+            
         })
         
         
